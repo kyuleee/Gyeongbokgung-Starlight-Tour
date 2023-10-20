@@ -1,7 +1,17 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
 canvas{
-  background: radial-gradient(
-    circle farthest-corner at center top,
-    #071021,
-    #19324a
-  )!important;
+  position: relative;
+  /* background:radial-gradient(circle farthest-corner at center top, #071021, #19324a)!important; */
+}
+#myCanvas{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background:radial-gradient(circle farthest-corner at center top, #071021, #19324a);
+  z-index: -1;
 }

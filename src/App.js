@@ -5,7 +5,7 @@ import { useEffect, useRef } from 'react';
 
 function App() {
 const intro = useRef();
-  //sadasdsad
+  
        
 useEffect(()=>{
   const intros = intro.current
@@ -29,6 +29,7 @@ useEffect(()=>{
   //renderer
   
   const renderer = new THREE.WebGLRenderer({
+    canvas: document.createElement("canvas"),
     antialias: true,
     alpha: true 
   });
@@ -36,7 +37,7 @@ useEffect(()=>{
   
   renderer.setSize(sizes.width, sizes.height);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-  renderer.setClearColor(new THREE.Color(0x000000, 0.0));
+  renderer.setClearColor(0x000000, 0.0);
   
   document.body.appendChild(renderer.domElement);
 
@@ -55,44 +56,51 @@ useEffect(()=>{
   });
   // Objects
   // sphere
-  const geometry = new THREE.TorusGeometry(0.7, 0.2, 16, 100);
-  const material = new THREE.PointsMaterial({
-    size: 0.005,
-    color: 0x87a7ca,
-  });
-  const sphere = new THREE.Points(geometry, material);
-  scene.add(sphere);
+
+  // const material = new THREE.PointsMaterial({
+  //   size: 0.005,
+  //   color: 0x87a7ca,
+  // });
+  // const sphere = new THREE.Points(geometry, material);
+  // scene.add(sphere);
 
   //particle
   const particlesGeometry = new THREE.BufferGeometry();
-  let canvas = document.createElement("canvas");
-  let ctx = canvas.getContext("2d");
-  canvas.height = 100;
-  canvas.width = 100;
-  ctx.fillStyle = "#fff";
-  ctx.beginPath();
-  ctx.arc(50, 50, 25, 0, 2 * Math.PI);
-  ctx.fill();
 
+  let canvas2 = document.getElementById("myCanvas");
+  let ctx = canvas2.getContext("2d");
+ 
+  ctx.fillRect(0, 0, window.innerWidth,window.innerheight);
 
+  // const canvas = document.getElementById('myCanvas');
+  // const ctx = canvas.getContext('2d');
+  // const grd = ctx.createLinearGradient(0, 0, 350, 0);
 
-
+  // // 4. 그라데이션 위치, 색상 추가
+  // grd.addColorStop(0,'#071021');
+  // grd.addColorStop(0.5, '#19324a'); 
+  // // 채울 스타일을 적용
+  // ctx.fillStyle = grd; 
+  
+  // // 캔버스 크기의 사각형으로 채우기
+  // ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
 
   const particlesmaterial = new THREE.PointsMaterial({
-    size: 0.01,
+    size: 0.008,
     transparent: true,
   });
   //별 외형?
   const particlesCnt = 3000;
   //별 갯수
-  const posArray = new Float32Array(particlesCnt * 3);
+  const posArray = new Float32Array(particlesCnt * 4);
   //별갯수x3
   // xyz,xyz,xyz , xyz
   for (let i = 0; i < particlesCnt * 3; i++) {
     //posArray[i] = Math.random()
     //   posArray[i] = Math.random() - 0.5
     //   posArray[i] = (Math.random() - 0.5) * 5
-    posArray[i] = (Math.random() - 0.5) * (Math.random() * 5);
+    posArray[i] = (Math.random() - 0.5) * (Math.random() * 30);
   }
 
   particlesGeometry.setAttribute(
@@ -125,9 +133,10 @@ useEffect(()=>{
 
     const elapsedTime = clock.getElapsedTime();
     // Update objects
-    sphere.rotation.y = 0.5 * elapsedTime;
+    // sphere.rotation.y = 0.5 * elapsedTime;
     particlesMesh.rotation.y = -1 * (elapsedTime * 0.1);
-
+    particlesMesh.rotation.x = 1 * (elapsedTime * 0.1);
+    particlesMesh.rotation.z = 0 * (elapsedTime * 0.1);
     if (mouseX > 0) {
       particlesMesh.rotation.x = -mouseY * (elapsedTime * 0.00008);
       particlesMesh.rotation.y = -mouseX * (elapsedTime * 0.00008);
@@ -142,7 +151,7 @@ useEffect(()=>{
 
   return(
 
-    <div  className='intro' ref={intro}></div>
+    <canvas id="myCanvas"></canvas>
 
   );
 
