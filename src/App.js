@@ -2,13 +2,14 @@ import "./App.css";
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { useEffect, useRef } from 'react';
+import Palace from "./palace"
 
 function App() {
-const intro = useRef();
+const myCanvas = useRef();
   
        
 useEffect(()=>{
-  const intros = intro.current
+  const myCanvass = myCanvas.current
   // Scene
   const scene = new THREE.Scene();
 
@@ -33,6 +34,18 @@ useEffect(()=>{
     antialias: true,
     alpha: true 
   });
+
+
+  const light = new THREE.DirectionalLight( "#FFFF66"	, 5 );
+  light.position.set( 0, 1, 0 ); //default; light shining from top
+  light.castShadow = true; // default false
+  scene.add( light );
+
+  //Set up shadow properties for the light
+  light.shadow.mapSize.width = 512; // default
+  light.shadow.mapSize.height = 512; // default
+  light.shadow.camera.near = 0.5; // default
+  light.shadow.camera.far = 500; // default
 
   
   renderer.setSize(sizes.width, sizes.height);
@@ -91,9 +104,9 @@ useEffect(()=>{
     transparent: true,
   });
   //별 외형?
-  const particlesCnt = 3000;
+  const particlesCnt = 1000;
   //별 갯수
-  const posArray = new Float32Array(particlesCnt * 4);
+  const posArray = new Float32Array(particlesCnt * 3);
   //별갯수x3
   // xyz,xyz,xyz , xyz
   for (let i = 0; i < particlesCnt * 3; i++) {
@@ -150,9 +163,11 @@ useEffect(()=>{
   })
 
   return(
-
-    <canvas id="myCanvas"></canvas>
-
+    <div className="App">
+       <canvas id="myCanvas" ref={myCanvas}></canvas>
+      <Palace />
+    </div>
+   
   );
 
 } 

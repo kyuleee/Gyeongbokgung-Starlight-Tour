@@ -5,6 +5,7 @@ body {
 
 canvas{
   position: relative;
+  z-index: -10;
   /* background:radial-gradient(circle farthest-corner at center top, #071021, #19324a)!important; */
 }
 #myCanvas{
@@ -12,6 +13,15 @@ canvas{
   width: 100%;
   top: 0;
   left: 0;
-  background:radial-gradient(circle farthest-corner at center top, #071021, #19324a);
-  z-index: -1;
+  background:radial-gradient(circle farthest-corner at center top, #ffff6650,#52605F,#223441,#142738,#142738, #1c3953);
+  z-index: -100;
+}
+.palace{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
 }
