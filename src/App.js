@@ -1,13 +1,13 @@
 import "./App.css";
 import * as THREE from 'three';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { useEffect, useRef } from 'react';
 import Palace from "./palace"
+import Section1 from "./section1" 
 
 function App() {
 const myCanvas = useRef();
-  
-       
+
+      
 useEffect(()=>{
   const myCanvass = myCanvas.current
   // Scene
@@ -35,7 +35,6 @@ useEffect(()=>{
     alpha: true 
   });
 
-
   const light = new THREE.DirectionalLight( "#FFFF66"	, 5 );
   light.position.set( 0, 1, 0 ); //default; light shining from top
   light.castShadow = true; // default false
@@ -56,8 +55,8 @@ useEffect(()=>{
 
   window.addEventListener("resize", () => {
     // Update sizes
-    sizes.width = window.innerWidth;
-    sizes.height = window.innerHeight;
+    sizes.width = myCanvass.clientWidth;
+    sizes.height = myCanvass.clientHeight;
 
     // Update camera
     camera.aspect = sizes.width / sizes.height;
@@ -68,14 +67,6 @@ useEffect(()=>{
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   });
   // Objects
-  // sphere
-
-  // const material = new THREE.PointsMaterial({
-  //   size: 0.005,
-  //   color: 0x87a7ca,
-  // });
-  // const sphere = new THREE.Points(geometry, material);
-  // scene.add(sphere);
 
   //particle
   const particlesGeometry = new THREE.BufferGeometry();
@@ -84,20 +75,6 @@ useEffect(()=>{
   let ctx = canvas2.getContext("2d");
  
   ctx.fillRect(0, 0, window.innerWidth,window.innerheight);
-
-  // const canvas = document.getElementById('myCanvas');
-  // const ctx = canvas.getContext('2d');
-  // const grd = ctx.createLinearGradient(0, 0, 350, 0);
-
-  // // 4. 그라데이션 위치, 색상 추가
-  // grd.addColorStop(0,'#071021');
-  // grd.addColorStop(0.5, '#19324a'); 
-  // // 채울 스타일을 적용
-  // ctx.fillStyle = grd; 
-  
-  // // 캔버스 크기의 사각형으로 채우기
-  // ctx.clearRect(0, 0, canvas.width, canvas.height);
-  
 
   const particlesmaterial = new THREE.PointsMaterial({
     size: 0.008,
@@ -110,9 +87,6 @@ useEffect(()=>{
   //별갯수x3
   // xyz,xyz,xyz , xyz
   for (let i = 0; i < particlesCnt * 3; i++) {
-    //posArray[i] = Math.random()
-    //   posArray[i] = Math.random() - 0.5
-    //   posArray[i] = (Math.random() - 0.5) * 5
     posArray[i] = (Math.random() - 0.5) * (Math.random() * 30);
   }
 
@@ -127,17 +101,13 @@ useEffect(()=>{
   //mouse
   document.addEventListener("mousemove", animateParticles);
 
-  let mouseX = 0;
-  let mouseY = 0;
+  let mouseX = 1;
+  let mouseY = 1;
 
   function animateParticles(event) {
     mouseY = event.clientY;
     mouseX = event.clientX;
   }
-
-  /**
-   * Animate
-   */
 
   const clock = new THREE.Clock();
 
@@ -157,16 +127,23 @@ useEffect(()=>{
 
     renderer.render(scene, camera);
   };
+  
+
 
   animate();
 
   })
 
+
   return(
+    <body>
     <div className="App">
        <canvas id="myCanvas" ref={myCanvas}></canvas>
       <Palace />
+      <Section1/>
     </div>
+
+    </body>
    
   );
 

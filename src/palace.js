@@ -35,14 +35,14 @@ const Palace = () => {
     camera.position.x = 0;
         scene.add(camera)
 
-    //light
+    //light 글씨 쏴주는 불빛
     const PointLight = new THREE.PointLight( "#FFFF66", 14 );
     PointLight.position.Z= 1; 
     PointLight.position.x= -0.5; 
     PointLight.position.y=4.3; //default; light shining from top
     PointLight.castShadow = true; // default false
     scene.add( PointLight );
-    const PointLight2 = new THREE.PointLight( "#FFFF66", );
+    const PointLight2 = new THREE.PointLight( "red", 100);
     PointLight2.position.z=2; 
     PointLight2.position.x=-0.5; 
     PointLight2.position.y=4.3;
@@ -136,7 +136,7 @@ const Palace = () => {
     });
  })
     return ( 
-        <section className='palace' ref={main}></section>
+        <div className='palace' ref={main}></div>
      );
 }
  
