@@ -42,11 +42,15 @@ const Palace = () => {
     PointLight.position.y=4.3; //default; light shining from top
     PointLight.castShadow = true; // default false
     scene.add( PointLight );
-    const PointLight2 = new THREE.PointLight( "red", 100);
+
+    // 글씨 서브 불빛
+    const PointLight2 = new THREE.PointLight( "red", 50);
     PointLight2.position.z=2; 
     PointLight2.position.x=-0.5; 
     PointLight2.position.y=4.3;
     PointLight2.castShadow = true; // default false
+    
+    // 땅바닥 왼쪽 불빛
     scene.add( PointLight2 );
     const light = new THREE.PointLight( "#FFFF66", 2 );
     light.position.z= 3; 
@@ -54,24 +58,48 @@ const Palace = () => {
     light.position.y= -2; 
     light.castShadow = true; // default false
     scene.add( light );
-    const light2 = new THREE.PointLight( "#FFFF66", 2 );
+    
+    // 2층 왼쪽 불빛
+    const light2 = new THREE.PointLight( "#33ffff", 1 );
     light2.position.z= 2; 
     light2.position.x= -1.7; 
     light2.position.y= -1.4; 
     light2.castShadow = true; // default false
     scene.add( light2 );
-    const light3 = new THREE.PointLight( "#FFFF66", 6.5);
+
+    //2층 중앙 불빛
+    const light3 = new THREE.PointLight( "#33ffff", 1);
     light3.position.z= 2.2; 
     light3.position.x= 0; 
     light3.position.y= -1.2;
     light3.castShadow = true; // default false
     scene.add( light3 );
-    const light4 = new THREE.PointLight( "#FFFF66", 6.5);
+
+    //2층 오른쪽 불빛
+    const light4 = new THREE.PointLight( "#33ffff", 1);
     light4.position.z= 2; 
-    light4.position.x= 1.7; 
+    light4.position.x= 1.2; 
     light4.position.y= -1.4; 
     light4.castShadow = true; // default false
     scene.add( light4 );
+
+    //1층 왼쪽 불빛
+    const light5 = new THREE.PointLight( "green", 6.5);
+    light5.position.z= 2.2; 
+    light5.position.x= -1.2; 
+    light5.position.y= -2;
+    light5.castShadow = true; // default false
+    scene.add( light5 );
+
+    //1층 오른쪽 불빛
+    const light6 = new THREE.PointLight( "green", 6.5);
+    light6.position.z= 2.2; 
+    light6.position.x= 1.2; 
+    light6.position.y= -2;
+    light6.castShadow = true; // default false
+    scene.add( light6 );
+
+
 
     //Set up shadow properties for the light
     light.shadow.mapSize.width = 512; // default
