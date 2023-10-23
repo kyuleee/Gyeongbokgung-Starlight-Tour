@@ -1,23 +1,51 @@
 .App{
-  overflow: hidden;
+  position: relative;
+  
 }
 body {
   margin: 0;
-  overflow: hidden;
 }
-
-
+canvas{
+  position: relative;
+  width: 100%;
+  height: 100vh ;
+  z-index: -90;
+  
+}
 #myCanvas{
   position: fixed;
   width: 100%;
-  height : 100vh;
-  background:radial-gradient(circle farthest-corner at center top, #ffff6650,#52605F,#223441,#142738,#142738, #1c3953);
+  height : 130vh;
+  background-color: #1c3953;
   z-index: -100;
-  overflow: hidden;
 }
+
 .palace{
-  position: fixed;
+  position: absolute;
+  background:radial-gradient(circle farthest-corner at center top, rgba(255, 255, 255, 0.4),rgba(236, 255, 66, 0.1),rgb(3, 14, 61,0.2), rgb(0, 1, 56,0.1), rgb(0, 0, 0,0.1));
+  top:0;
+  left: 0;
   width: 100%;
-  height: 100vh;
+  height: 130vh;
+  overflow: hidden;
   z-index: 1;
 }
+.main{
+  position: relative;
+}
+/* .section1{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 130vh;
+    background-color: transparent;
+    z-index: -999;
+  } */
+
+/* .section2{
+      width: 100%;
+      height: 100vh;
+      background-color: transparent;
+      z-index: 99;
+  }
+   */

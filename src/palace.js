@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { useRef,useEffect } from 'react';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js'
-import model from './img/TEAM.glb'
+import model from './img/TEAM2.glb'
 
 
 const Palace = () => {
@@ -25,79 +25,71 @@ const Palace = () => {
 
     //camera
     const camera = new THREE.PerspectiveCamera(
-        75,
+        115,
         window.innerWidth / window.innerHeight,
-        0.1,
+        0.25,
         100
     );
     camera.position.z = 6;
-    camera.position.y = -2.5;
+    camera.position.y = -2.3;
     camera.position.x = 0;
-        scene.add(camera)
+    scene.add(camera)
 
     //light 글씨 쏴주는 불빛
-    const PointLight = new THREE.PointLight( "#FFFF66", 14 );
-    PointLight.position.Z= 1; 
-    PointLight.position.x= -0.5; 
-    PointLight.position.y=4.3; //default; light shining from top
+    const PointLight = new THREE.PointLight( "whtie", 16 );
+    PointLight.position.Z= 8; 
+    PointLight.position.x= -1.0; 
+    PointLight.position.y=3.8; //default; light shining from top
     PointLight.castShadow = true; // default false
     scene.add( PointLight );
-
+    
     // 글씨 서브 불빛
-    const PointLight2 = new THREE.PointLight( "red", 50);
-    PointLight2.position.z=2; 
+    const PointLight2 = new THREE.PointLight( "yellow", 50);
+    PointLight2.position.z=1; 
     PointLight2.position.x=-0.5; 
-    PointLight2.position.y=4.3;
+    PointLight2.position.y=4.8;
     PointLight2.castShadow = true; // default false
     
     // 땅바닥 왼쪽 불빛
     scene.add( PointLight2 );
-    const light = new THREE.PointLight( "#FFFF66", 2 );
+    const light = new THREE.PointLight( "yellow", 50);
     light.position.z= 3; 
-    light.position.x= -3; 
-    light.position.y= -2; 
+    light.position.x= 0; 
+    light.position.y= 0; 
     light.castShadow = true; // default false
     scene.add( light );
     
-    // 2층 왼쪽 불빛
-    const light2 = new THREE.PointLight( "#33ffff", 1 );
-    light2.position.z= 2; 
-    light2.position.x= -1.7; 
-    light2.position.y= -1.4; 
+  
+    //1층 오른쪽 불빛
+    // const light6 = new THREE.PointLight( "whtie", 15);
+    // light6.position.z= 0.5; 
+    // light6.position.x= 0; 
+    // light6.position.y= -2;
+    // light6.castShadow = true; // default false
+    // scene.add( light6 );
+
+    const light2 = new THREE.PointLight( "whtie", 15);
+    light2.position.z= 1.7; 
+    light2.position.x= 0; 
+    light2.position.y= -2.5;
     light2.castShadow = true; // default false
     scene.add( light2 );
 
-    //2층 중앙 불빛
-    const light3 = new THREE.PointLight( "#33ffff", 1);
-    light3.position.z= 2.2; 
-    light3.position.x= 0; 
-    light3.position.y= -1.2;
+    const light3 = new THREE.PointLight( "whtie", 10);
+    light3.position.z= 1.7; 
+    light3.position.x= -2; 
+    light3.position.y= -3.5;
     light3.castShadow = true; // default false
     scene.add( light3 );
 
-    //2층 오른쪽 불빛
-    const light4 = new THREE.PointLight( "#33ffff", 1);
-    light4.position.z= 2; 
-    light4.position.x= 1.2; 
-    light4.position.y= -1.4; 
+    const light4 = new THREE.PointLight( "whtie", 10);
+    light4.position.z= 1.7; 
+    light4.position.x= 2; 
+    light4.position.y= -3.5;
     light4.castShadow = true; // default false
     scene.add( light4 );
 
-    //1층 왼쪽 불빛
-    const light5 = new THREE.PointLight( "green", 6.5);
-    light5.position.z= 2.2; 
-    light5.position.x= -1.2; 
-    light5.position.y= -2;
-    light5.castShadow = true; // default false
-    scene.add( light5 );
 
-    //1층 오른쪽 불빛
-    const light6 = new THREE.PointLight( "green", 6.5);
-    light6.position.z= 2.2; 
-    light6.position.x= 1.2; 
-    light6.position.y= -2;
-    light6.castShadow = true; // default false
-    scene.add( light6 );
 
 
 
@@ -118,8 +110,9 @@ const Palace = () => {
     gltfLoader.load(model, (gltf)=>{
         const imgs = gltf.scene.children[0];
         scene.add(imgs)
-        imgs.position.z = 1;
-        imgs.position.y = 1.7;
+        imgs.position.z = 0;
+        imgs.position.x = 0;
+        imgs.position.y = 0.7;
         imgs.castShadow = true; //default is false
         imgs.receiveShadow = false; //default
         mixer = new THREE.AnimationMixer()
@@ -136,6 +129,10 @@ const Palace = () => {
     const animate = ()=>{
         const time = clock.getElapsedTime();
         controls.update()
+        controls.minDistance =4;
+        controls.maxDistance =6;
+        controls.rotateSpeed = 0.5;
+        controls.zoomSpeed = 0.5;
         if(mixer) mixer.update(time);
         renderer.render(scene,camera);
         renderer.setAnimationLoop(animate)
