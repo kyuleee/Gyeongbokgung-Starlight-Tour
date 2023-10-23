@@ -113,10 +113,13 @@ function Sky(){
             window.requestAnimationFrame(animate);
 
             const elapsedTime = clock.getElapsedTime();
-            // Update objects
-            particlesMesh.rotation.y = -1 * (elapsedTime * 0.1);
-            particlesMesh.rotation.x = 1 * (elapsedTime * 0.1);
-            particlesMesh.rotation.z = 0 * (elapsedTime * 0.1);
+            // // Update objects
+            // particlesMesh.rotation.y = -1 * (elapsedTime * 0.1);
+            // particlesMesh.rotation.x = 1 * (elapsedTime * 0.1);
+            // particlesMesh.rotation.z = 0 * (elapsedTime * 0.1);
+            particlesMesh.rotation.y = 1;
+            particlesMesh.rotation.x = 1;
+            particlesMesh.rotation.z = 1;
             if (mouseX > 0) {
             particlesMesh.rotation.x = -mouseY * (elapsedTime * 0.00008);
             particlesMesh.rotation.y = -mouseX * (elapsedTime * 0.00008);

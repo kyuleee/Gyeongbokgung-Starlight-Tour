@@ -1,3 +1,4 @@
+import "./section2.css";
 
 const Section2 = () => {
 

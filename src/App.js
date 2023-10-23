@@ -11,8 +11,8 @@ function App() {
           <SKY />
           <Palace />
         </section>
-   
-
+          <Section1 />
+          <Section2 />
     </body>
   );
 
