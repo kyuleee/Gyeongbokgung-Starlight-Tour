@@ -116,7 +116,6 @@ useEffect(()=>{
 
     const elapsedTime = clock.getElapsedTime();
     // Update objects
-    // sphere.rotation.y = 0.5 * elapsedTime;
     particlesMesh.rotation.y = -1 * (elapsedTime * 0.1);
     particlesMesh.rotation.x = 1 * (elapsedTime * 0.1);
     particlesMesh.rotation.z = 0 * (elapsedTime * 0.1);
@@ -137,14 +136,14 @@ useEffect(()=>{
 
   return(
     <body>
-    <div className="App">
-       <canvas id="myCanvas" ref={myCanvas}></canvas>
+    <div>
+      <section className="divvv">
+        <canvas id="myCanvas" ref={myCanvas}></canvas>
+      </section>
       <Palace />
-      <Section1/>
     </div>
-
+    <Section1><h1>hi</h1></Section1>
     </body>
-   
   );
 
 } 

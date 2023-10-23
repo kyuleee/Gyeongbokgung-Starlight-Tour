@@ -116,7 +116,6 @@ const Palace = () => {
     
     const gltfLoader = new GLTFLoader();
     gltfLoader.load(model, (gltf)=>{
-        console.log(gltf)
         const imgs = gltf.scene.children[0];
         scene.add(imgs)
         imgs.position.z = 1;
@@ -132,21 +131,10 @@ const Palace = () => {
     })
 
 
-
-    //mesh
-    // const gemetry = new THREE.BoxGeometry(1,1,1)
-    // const material = new THREE.MeshStandardMaterial({
-    //     color : 'red'
-    // }) 
-    // const mesh = new THREE.Mesh(gemetry, material)
-    // scene.add(mesh);
-
     //애니메이션
     const clock = new THREE.Clock();
     const animate = ()=>{
         const time = clock.getElapsedTime();
-        // mesh.rotation.y = time;
-        // mesh.scale.set(1,1,1)
         controls.update()
         if(mixer) mixer.update(time);
         renderer.render(scene,camera);

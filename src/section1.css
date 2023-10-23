@@ -3,4 +3,5 @@
     height: 100vh;
     background-color: aqua;
     z-index: 999;
+    overflow: hidden;
   }
