@@ -31,7 +31,7 @@ const Palace = () => {
         100
     );
     camera.position.z = 6;
-    camera.position.y = -3;
+    camera.position.y = -3; 
     camera.position.x = 0;
     scene.add(camera)
 

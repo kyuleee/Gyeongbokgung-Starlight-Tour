@@ -1,8 +1,8 @@
 import "./App.css";
 import SKY from './sky'
 import Palace from './palace'
-import Section1 from "./section1";
-import Section2 from "./section2";
+import Gallery from "./gallery";
+import Footer from "./footer";
 function App() {
 
   return(
@@ -11,8 +11,8 @@ function App() {
           <SKY />
           <Palace />
         </section>
-          <Section1 />
-          <Section2 />
+          <Gallery />
+          <Footer />
     </body>
   );
 

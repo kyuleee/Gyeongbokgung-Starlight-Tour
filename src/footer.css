@@ -1,6 +1,6 @@
-.section1{
+.footer{
     position: absolute;
-    top: 1637px;
+    top: calc(1541px + 963px);
     width: 100%;
     height: 100vh;
 } 
