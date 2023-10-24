@@ -1,6 +1,46 @@
 .footer{
     position: absolute;
-    top: calc(1541px + 963px);
+    top: calc(1541px + 1373px);
     width: 100%;
-    height: 100vh;
+    padding: 0px 200px;
 } 
+
+.logoBox{
+    padding: 55px 0px 35px 0px;
+    color: white;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+    background-color: azure;
+    text-align: center;
+    line-height: 100px;
+}
+.tel{
+    color: white;
+    font-size: 16px;
+}
+.tel p{
+    margin-bottom: 15px;
+    display: flex;
+}
+.tel span{
+    display: block;
+    width: 100px;
+}
+.sns{
+    margin-top: 20px;
+    display: flex;
+}
+.sns div{
+    margin-right: 15px;
+    width: 33px;
+    height: 33px;
+    background-color: yellow;
+}
+
+.copy{
+    padding: 220px 0;
+    font-size: 16px;
+    color: #6D6D6D;
+}

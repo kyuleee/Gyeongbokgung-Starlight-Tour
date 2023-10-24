@@ -1,4 +1,5 @@
 import "./App.css";
+import "./reset.css";
 import SKY from './sky'
 import Palace from './palace'
 import Gallery from "./gallery";
