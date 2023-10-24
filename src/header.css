@@ -1,0 +1,24 @@
+.Sticky_nav{
+    background-color: rgba(0,0,0,0.4);
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 10px 50px;
+    z-index: 9999;
+  }
+  .LOGO{
+    background: url(./img/Logo_white.png);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+  }
+  .Sticky_nav>ul{
+    display: flex;
+    list-style: none;
+  }
+  .Sticky_nav li{
+    margin: 0 25px;
+  }

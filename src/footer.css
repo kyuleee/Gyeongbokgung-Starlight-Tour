@@ -1,7 +1,5 @@
 .footer{
-    position: absolute;
-    top: calc(1541px + 1373px);
-    width: 100%;
+    width: 1500px;
     padding: 0px 200px;
 } 
 
@@ -40,7 +38,7 @@
 }
 
 .copy{
-    padding: 220px 0;
+    padding: 30px 0;
     font-size: 16px;
     color: #6D6D6D;
 }

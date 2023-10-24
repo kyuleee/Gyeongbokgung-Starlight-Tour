@@ -1,0 +1,70 @@
+.w1500{
+    width: 1500px;
+    margin: 0 auto;
+}
+.Top_Bnr{
+    display: flex;
+    background-color:  yellow;
+    align-items: center;
+    padding: 30px 0;
+    overflow: hidden;
+}
+.Bnr_arr{
+    width: 25px;
+    height: 25px;
+    background: url(./img/bnr_arr.png) no-repeat;
+    background: cover;
+    margin-right: 50px;
+}
+.Bnr_Text_White{
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 50px;
+    color: transparent;
+    -webkit-text-stroke: 1px #000;
+}
+.Bnr_Text{
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 50px;
+}
+.section3_main{
+    margin-top: 190px;
+    margin-bottom: 220px;
+    display: flex;
+}
+.section3_main>div{
+    width: calc(100% /2);
+}
+.section3_title{
+    font-size: 80px;
+    color: #fff;
+
+}
+.section3_sub_title{
+    font-size: 80px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    margin-bottom: 150px;
+}
+.section3_btn{
+    display: inline-block;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 16px 40px;
+    border-radius: 30px;
+}
+.section3_right{
+    color: #fff;
+}
+
+.section3_right>div{
+    padding: 40px 0 50px;
+    border-top: 1px solid #888;
+}
+.section3_right_top{
+    border-top: 1px solid #fff !important;
+}
+.section3_right_btm{
+    border-bottom: 1px solid #fff;
+}

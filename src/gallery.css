@@ -1,9 +1,8 @@
 .gallery{
-    position: absolute;
-    top: 1541px;
     width: 100%;
     height: 100vh;
-    padding: 190px 0px 220px 0px;
+    padding: 0 0 220px;
+    overflow-x: hidden;
 } 
 
 .gallery-h1{

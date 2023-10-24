@@ -113,7 +113,7 @@ const Palace = () => {
         scene.add(imgs)
         imgs.position.z = 0;
         imgs.position.x = 0;
-        imgs.position.y = 0.7;
+        imgs.position.y = 0.4;
         imgs.castShadow = true; //default is false
         imgs.receiveShadow = false; //default
         mixer = new THREE.AnimationMixer()

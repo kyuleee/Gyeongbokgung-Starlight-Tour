@@ -75,13 +75,13 @@ function Sky(){
         // ctx.fillRect(0, 0, window.innerWidth,window.innerheight);
 
         const particlesmaterial = new THREE.PointsMaterial({
-            size: 0.008,
+            size: 0.02,
             transparent: true,
         });
         //별 외형?
-        const particlesCnt = 500;
+        const particlesCnt = 300;
         //별 갯수
-        const posArray = new Float32Array(particlesCnt * 3);
+        const posArray = new Float32Array(particlesCnt * 2);
         //별갯수x3
         // xyz,xyz,xyz , xyz
         for (let i = 0; i < particlesCnt * 3; i++) {
