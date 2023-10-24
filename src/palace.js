@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { useRef,useEffect } from 'react';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js'
-import model from './img/TEAM2.glb'
+import model from './img/TEAM3.glb'
 
 
 const Palace = () => {
@@ -31,23 +31,24 @@ const Palace = () => {
         100
     );
     camera.position.z = 6;
-    camera.position.y = -2.3;
+    camera.position.y = -3;
     camera.position.x = 0;
     scene.add(camera)
 
     //light 글씨 쏴주는 불빛
-    const PointLight = new THREE.PointLight( "whtie", 16 );
+    const PointLight = new THREE.PointLight( "whtie", 80 );
     PointLight.position.Z= 8; 
-    PointLight.position.x= -1.0; 
-    PointLight.position.y=3.8; //default; light shining from top
+    PointLight.position.x= -1.5; 
+    PointLight.position.y=7.8; //default; light shining from top
     PointLight.castShadow = true; // default false
     scene.add( PointLight );
     
+
     // 글씨 서브 불빛
-    const PointLight2 = new THREE.PointLight( "yellow", 50);
-    PointLight2.position.z=1; 
+    const PointLight2 = new THREE.PointLight( "#ffff33", 300);
+    PointLight2.position.z=2; 
     PointLight2.position.x=-0.5; 
-    PointLight2.position.y=4.8;
+    PointLight2.position.y=6.8;
     PointLight2.castShadow = true; // default false
     
     // 땅바닥 왼쪽 불빛
