@@ -1,4 +1,4 @@
-import './top.css'
+import '../css/top.css'
 
 const Top = () => {
     return ( 

@@ -12,7 +12,7 @@
 .Bnr_arr{
     width: 25px;
     height: 25px;
-    background: url(./img/bnr_arr.png) no-repeat;
+    background: url(../img/bnr_arr.png) no-repeat;
     background: cover;
     margin-right: 50px;
 }

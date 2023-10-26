@@ -1,15 +1,15 @@
 import "./App.css";
-import "./reset.css";
-import SKY from './sky'
-import Palace from './palace'
-import Gallery from "./gallery";
-import Footer from "./footer";
-import Section1 from './section1'
-import Section2 from './section2'
-import Section3 from './section3'
-import Header from "./header"
-import Top from "./top"
-import Test from "./test";
+import "./css/reset.css";
+import SKY from './component/sky'
+import Palace from './component/palace'
+import Gallery from "./component/gallery";
+import Footer from "./component/footer";
+import Section1 from './component/section1'
+import Section2 from './component/section2'
+import Section3 from './component/section3'
+import Header from "./component/header"
+import Top from "./component/top"
+
 
 function App() {
 
