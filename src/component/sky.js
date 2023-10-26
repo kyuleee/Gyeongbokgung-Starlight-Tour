@@ -133,8 +133,8 @@ function Sky(){
   })
 
   return(
-    
-    <section id="myCanvas" ref={sky}>
+    //skySection css는 App.css에 있음
+    <section id="skySection" ref={sky}>
 
     </section>
 

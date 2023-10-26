@@ -1,6 +1,6 @@
 import "./App.css";
 import "./css/reset.css";
-import SKY from './component/sky'
+import Sky from './component/sky'
 import Palace from './component/palace'
 import Gallery from "./component/gallery";
 import Footer from "./component/footer";
@@ -16,7 +16,7 @@ function App() {
   return(
     <div>
         <section>
-          <SKY />
+          <Sky />
           <Palace />
         </section>
         <Top/>
@@ -24,9 +24,6 @@ function App() {
         <Section1/>
         <Section2/>
         <Section3/>
-        {/* <section className="test2">   <Test />
-        </section> */}
-     
         <Gallery />
         <Footer />
     </div>

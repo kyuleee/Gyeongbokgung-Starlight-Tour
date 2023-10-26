@@ -59,15 +59,7 @@ const Palace = () => {
     light.position.y= 0; 
     light.castShadow = true; // default false
     scene.add( light );
-    
-  
-    //1층 오른쪽 불빛
-    // const light6 = new THREE.PointLight( "whtie", 15);
-    // light6.position.z= 0.5; 
-    // light6.position.x= 0; 
-    // light6.position.y= -2;
-    // light6.castShadow = true; // default false
-    // scene.add( light6 );
+
 
     const light2 = new THREE.PointLight( "whtie", 15);
     light2.position.z= 1.7; 
