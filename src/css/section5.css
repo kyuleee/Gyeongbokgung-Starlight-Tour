@@ -1,0 +1,26 @@
+.section5{
+    margin: 250px 0 190px
+}
+.section5Title{
+    font-size: 80px;
+    font-weight: 900;
+    margin-bottom: 150px;
+}
+.topMoveImg{
+    display: flex;
+}
+.topMoveImg>div{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    background-color: green;
+}
+.botMoveImg{
+    display: flex;
+}
+.botMoveImg>div{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    background-color: aqua;
+}

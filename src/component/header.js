@@ -1,17 +1,22 @@
 import '../css/header.css'
+import logo from "../img/Logo_white.png"
+import loginIcon from "../img/login.png"
 
 const Header  = () => {
     return ( 
-        <header className="Sticky_nav">
-        <div className="LOGO"></div>
+        <header className="stickyHead">
+        <img className="logo" src={logo}></img>
         <ul>
           <li>별빛야행 소개</li>
-          <li>메인 프로그램 소개</li>
-          <li>관련 행사 소개</li>
+          <li>메인 프로그램</li>
+          <li>경복궁 행사</li>
           <li>갤러리</li>
           <li>커뮤니티</li>
         </ul>
-        <div>ENG</div>
+        <div className="headRight">
+          <img className="loginIcon" src={loginIcon}></img>
+          <p>ENG</p>
+        </div>
       </header>
      );
 }

@@ -74,17 +74,9 @@ body {font-family:'Roboto' ,'Noto Sans KR', 'sans-serif';}
         unicode-range:U+0041-005A, U+0061-007A;	
 }
 *{
-  margin: 0;
-  padding: 0;
   color: #fff;
 }
 
-.App{
-  position: relative;  
-}
-body {
-  margin: 0;
-}
 canvas{
   position: relative;
   width: 100%;
@@ -120,7 +112,7 @@ canvas{
 .main{
   position: relative;
 }
-.w1320{
+.w1500{
   width: 1500px;
   margin: 0 auto;
 }

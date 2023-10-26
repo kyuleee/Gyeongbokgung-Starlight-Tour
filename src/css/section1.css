@@ -1,66 +1,82 @@
 .section1{
-    width: 100%;
-    padding: 190px 0 220px;
-    margin: 0 auto;
-} 
-.section1>article{
+    margin-top: 160px;
+    margin-bottom: 190px;
+}
+.section1Article{
     display: flex;
 }
-.section1>article>*{
-    flex: 1;
+.section1Article>div{
+    width: calc(100%/2);
 }
-h2{
+.section1Title{
     font-size: 80px;
     font-weight: 900;
+    margin-bottom: 150px;
 }
-.section1>article>div:first-child>p{
-    line-height: 1.5;
-    font-weight: 300;
+.section1Content{
+    font-size: 18px;
+    margin-bottom: 10px;
 }
-.txtBorder{
-    /* color: transparent;
-    -webkit-text-stroke:1px #fff; */
-    margin-bottom: 50px;
-    background: linear-gradient(to right top, #A8C0FF, #3F2B96);
-    color: transparent;
-    -webkit-background-clip: text;
-    
-}
-.btn_viewmore{
-    width: 210px;
+/* .moreBtn{
+    width: 200px;
     height: 60px;
-    border: 1px solid #fff;
-    border-radius: 1000px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: inline-block;
     font-size: 24px;
-    margin-top: 150px;
-}
-.section1 ul{
-    padding: 34px 0 0 125px;
+    text-align: center;
+    line-height: 60px;
+    margin-top: 40px;
+    border: 1px solid white;
+} */
+.moreBtn {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 60px;
+    margin-top: 40px;
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 24px;
+    font-weight: 100;
+    line-height: 60px;
+    text-align: center;
+    overflow: hidden;
+  }
+  .moreBtn:after {
+    position: absolute;
+    content: '';
+    top: calc(50% - 50px);
+    left: -50px;
+    width: 20px;
+    height: 100px;
+    background: rgba(255, 255, 255, 1);
+    transform: rotate(30deg);
+    transition: 500ms;
+    opacity: 0;
+  }
+  .moreBtn:hover:after {
+    left: calc(100% + 50px);
+    opacity: 1;
+  }
 
+
+
+
+
+
+
+
+.tableWrap{
+    margin-top: 100px;
 }
-.section1 li{
-    display: flex;
-    margin-bottom: 30px;
-    align-items: center;
-}
-h3{
+.titleBox{
+    width: 180px; 
+    border: 1px solid white;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
-    width: 180px; height: 32px;
-    padding:0 4px ;
-    /* border: 1px solid #fff; */
-    background:linear-gradient(90deg, #A8C0FF 0%, #3F2B96 100%);
-    margin-right: 25px;
-}
-.section1 li>h3>span{
     font-size: 20px;
-    font-weight: normal;
+    margin: 0 30px 30px 0;
 }
-.section1 li p{
+.titleBoxContent{
     font-size: 18px;
-    font-weight: lighter;
 }
-
