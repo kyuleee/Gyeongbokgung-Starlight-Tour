@@ -7,20 +7,81 @@
     margin-bottom: 150px;
 }
 .topMoveImg{
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+.topMoveWrap{
     display: flex;
 }
-.topMoveImg>div{
+.topMoveWrap li{
     width: 300px;
     height: 300px;
     margin: 10px;
     background-color: green;
 }
-.botMoveImg{
-    display: flex;
-}
+
+
 .botMoveImg>div{
     width: 300px;
     height: 300px;
     margin: 10px;
     background-color: aqua;
+}
+
+
+
+
+/*슬라이드 아티클*/
+.slideWrapper{
+    overflow: hidden;
+}
+.topMovewrapper{
+    display: flex;
+}
+.boxtest{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+}
+.slide{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: relative;
+}
+.original{
+    animation: originalMove 20s linear infinite normal none running;
+}
+.cloneBox{
+    animation: cloneMove 20s linear infinite;
+}
+.slide.stop{
+    animation-play-state: paused;
+}
+.moveBox:hover{
+    transform: scale(0.98);
+}
+.moveBox{
+    width: 300px;
+    height: 300px;
+    margin:10px;
+    cursor: pointer;
+    z-index: 2;
+    transition: 0.3s;
+    transform: scale(1);
+}
+.item{
+    width: 300px;
+    height: 100px;
+}
+@keyframes originalMove{
+    0% {transform: translateX(0%);}
+    50% {transform: translateX(-100%);}
+    50.1% {transform: translateX(100%);}
+    100% {transform: translateX(0%);}
+}
+@keyframes cloneMove{
+    0% {transform: translateX(0%);}
+    100% {transform: translateX(-200%);}
 }
