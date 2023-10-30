@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { useRef,useEffect } from 'react';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js'
-import model from '../img/TEAM3.glb'
+import model from '../srcImg/TEAM3.glb'
 
 
 const Palace = () => {
@@ -16,8 +16,6 @@ const Palace = () => {
     });
     renderer.setSize(mainCur.clientWidth,  mainCur.clientHeight);
     renderer.setPixelRatio(window.devicePixelRatio > 1 ? 2 : 1);
-  
-    // document.body.innerHTML="";
     mainCur.appendChild(renderer.domElement);
 
     //scene

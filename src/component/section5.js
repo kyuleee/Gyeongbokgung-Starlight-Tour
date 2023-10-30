@@ -1,19 +1,26 @@
 import { useState} from 'react';
 import '../css/section5.css'
-import img1 from '../img/img1.jpg'
 
 const Section5 = () => {
-    const [move, setMove] = useState(true);
-    const onStop = () => setMove(false);
-    const onRun = () => setMove(true);
+    //위에 슬라이드
+    const [topMove, setTopMove] = useState(true);
+    const topOnStop = () => setTopMove(false);
+    const topOnRun = () => setTopMove(true);
+    
+    // 아래 슬라이드
+    const [botMove, setBotMove] = useState(true);
+    const botOnStop = () => setBotMove(false);
+    const botOnRun = () => setBotMove(true);
+
+
     const slides = [
-        { color: "red", target: "#" },
-        { color: "red", target: "#" },
-        { color: "red", target: "#" },
-        { color: "red", target: "#" },
-        { color: "red", target: "#" },
-        { color: "red", target: "#" },
-        { color: "red", target: "#" },
+        { background: 'img/gallery_img1.jpg', target: "#" },
+        { background: 'img/gallery_img2.jpg', target: "#" },
+        { background: 'img/gallery_img3.jpg', target: "#" },
+        { background: 'img/gallery_img4.jpg', target: "#" },
+        { background: 'img/gallery_img5.jpg', target: "#" },
+        { background: 'img/gallery_img6.jpg', target: "#" },
+        { background: 'img/gallery_img7.jpg', target: "#" },
     ];
 
     return (  
@@ -22,25 +29,36 @@ const Section5 = () => {
                 <h1 className='section5Title'>경복궁 갤러리</h1>
             </article>
             <article className="slideWrapper">
-                <div>
-                    <ul className="topMovewrapper">
+                    <div className="moveWrapper">
                          {/*State False면 Class가 Stop 으로 바뀌면서 멈춤 */}
-                        <div className={"slide original" + (move ? "" : " stop")}>
+                        <ul className={"slide topOriginal" + (topMove ? "" : " stop")}>
                             {slides.map((s, i) => (
-                                <li className="moveBox" onMouseEnter={onStop} onMouseLeave={onRun} key={i}>
-                                    <div className="item" style={ { background: s.color}}></div>
+                                <li className="moveBox" style={{background: `url(${s.background})`}} onMouseEnter={topOnStop} onMouseLeave={topOnRun} key={i}>
                                 </li>
                             ))}
-                        </div>
-                        <div className={"slide cloneBox" + (move ? "" : " stop")} >
+                        </ul>
+                        <ul className={"slide topCloneBox" + (topMove ? "" : " stop")} >
                             {slides.map((s, i) => (
-                                <li className="moveBox" onMouseEnter={onStop} onMouseLeave={onRun} key={i}>
-                                    <div className="item" style={{ background:{ background: s.color}}}></div>
+                                <li className="moveBox" style={{background: `url(${s.background})`}} onMouseEnter={topOnStop} onMouseLeave={topOnRun} key={i}>
                                 </li>
                             ))}
-                        </div>
-                    </ul>
-                </div>
+                        </ul>
+                    </div>
+                    <div className="moveWrapper">
+                         {/*State False면 Class가 Stop 으로 바뀌면서 멈춤 */}
+                        <ul className={"slide botOriginal" + (botMove ? "" : " stop")}>
+                            {slides.map((s, i) => (
+                                <li className="moveBox" style={{background: `url(${s.background})`}} onMouseEnter={botOnStop} onMouseLeave={botOnRun} key={i}>
+                                </li>
+                            ))}
+                        </ul>
+                        <ul className={"slide botCloneBox" + (botMove ? "" : " stop")} >
+                            {slides.map((s, i) => (
+                                <li className="moveBox" style={{background: `url(${s.background})`}} onMouseEnter={botOnStop} onMouseLeave={botOnRun} key={i}>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
             </article>
 
         </section>

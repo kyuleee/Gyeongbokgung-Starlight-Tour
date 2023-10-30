@@ -6,61 +6,27 @@
     font-weight: 900;
     margin-bottom: 150px;
 }
-.topMoveImg{
-    width: 100%;
-    display: flex;
-    overflow: hidden;
-}
-.topMoveWrap{
-    display: flex;
-}
-.topMoveWrap li{
-    width: 300px;
-    height: 300px;
-    margin: 10px;
-    background-color: green;
-}
-
-
-.botMoveImg>div{
-    width: 300px;
-    height: 300px;
-    margin: 10px;
-    background-color: aqua;
-}
-
-
-
-
-/*슬라이드 아티클*/
+/* 탑 슬라이드*/
 .slideWrapper{
     overflow: hidden;
+    width: 100%;
 }
-.topMovewrapper{
+.moveWrapper{
     display: flex;
-}
-.boxtest{
-    width: 200px;
-    height: 200px;
-    background-color: aqua;
 }
 .slide{
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
-    position: relative;
 }
-.original{
-    animation: originalMove 20s linear infinite normal none running;
+.topOriginal{
+    animation: topOriginalMove 40s linear infinite normal none running;
 }
-.cloneBox{
-    animation: cloneMove 20s linear infinite;
+.topCloneBox{
+    animation: topCloneMove 40s linear infinite;
 }
 .slide.stop{
     animation-play-state: paused;
-}
-.moveBox:hover{
-    transform: scale(0.98);
 }
 .moveBox{
     width: 300px;
@@ -68,20 +34,34 @@
     margin:10px;
     cursor: pointer;
     z-index: 2;
-    transition: 0.3s;
-    transform: scale(1);
 }
-.item{
-    width: 300px;
-    height: 100px;
+.moveBox:hover{
+    transform: scale(0.98);
 }
-@keyframes originalMove{
+@keyframes topOriginalMove{
     0% {transform: translateX(0%);}
     50% {transform: translateX(-100%);}
-    50.1% {transform: translateX(100%);}
+    50.001% {transform: translateX(100%);}
     100% {transform: translateX(0%);}
 }
-@keyframes cloneMove{
+@keyframes topCloneMove{
     0% {transform: translateX(0%);}
     100% {transform: translateX(-200%);}
+}
+/* 아래 슬라이드*/
+.botOriginal{
+    animation: botOriginalMove 40s linear infinite normal none running;
+}
+.botCloneBox{
+    animation: botCloneMove 40s linear infinite;
+}
+@keyframes botOriginalMove{
+    0% {transform: translateX(0%);}
+    50% {transform: translateX(100%);}
+    50.001% {transform: translateX(-100%);}
+    100% {transform: translateX(0%);}
+}
+@keyframes botCloneMove{
+    0% {transform: translateX(-200%);}
+    100% {transform: translateX(0%);}
 }
