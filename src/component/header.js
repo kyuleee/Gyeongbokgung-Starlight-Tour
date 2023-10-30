@@ -7,7 +7,7 @@ const Header  = () => {
 
     return ( 
         <header className="stickyHead">
-        <img alt='로고' className="logo" src={imgUrl + 'img/Logo_white.png'}></img>
+        <img alt='로고' className="headerLogo" src={imgUrl + 'img/Logo_white.png'}></img>
         <ul>
           <li>별빛야행 소개</li>
           <li>메인 프로그램</li>

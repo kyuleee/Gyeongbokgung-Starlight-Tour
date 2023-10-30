@@ -1,0 +1,230 @@
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.section2 {
+  width: 100%;
+  margin: 0 auto;
+}
+.sec2Padding {
+  padding: 250px 0px 190px 0px;
+}
+
+.programH1{
+  margin-top: 0 !important;
+  margin-left: -200px;
+  font-size: 80px;
+  font-weight: 700;
+}
+
+.programH2{
+  margin-top: 130px;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+
+.section2Aticle {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+p {
+  display: block;
+  font-size: 20px;
+}
+
+.section2Aticle p:first-of-type {
+  margin-top: 20px;
+}
+
+.section2Aticle p {
+  margin-top: 10px;
+}
+
+
+.programMoreBtn {
+  position: relative;
+  width: 200px;
+  height: 60px;
+  margin-top: 480px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background-color: transparent;
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 60px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 9999;
+
+}
+.programMoreBtn:after {
+  position: absolute;
+  content: '';
+  top: calc(50% - 50px);
+  left: -50px;
+  width: 20px;
+  height: 100px;
+  background: rgba(255, 255, 255, 1);
+  transform: rotate(30deg);
+  transition: 500ms;
+  opacity: 0;
+}
+
+.programMoreBtn:hover:after {
+  left: calc(100% + 50px);
+  opacity: 1;
+}
+
+
+.programImgbox {
+  width: 100%;
+}
+
+.programImgbox img{
+  width: 100%;
+  height: 532px;
+}
+
+.bannerArrow {
+  padding: 35px 50px;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+}
+
+.rollingBanner {
+  display: flex;
+  width: 200%;
+  white-space: nowrap;
+  height: 120px;
+  line-height: 116px;
+  background-color: yellow;
+  animation: infiniteAnimation1 30s linear 0s infinite normal;
+}
+.Clone{
+  animation: infiniteAnimation2  30s linear 0s infinite normal;
+}
+@keyframes infiniteAnimation1 {
+  0% {
+      transform: translateX(0%);
+  }
+  50% {
+      transform: translateX(-100%);
+  }
+  50.1% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(0%);
+  }
+}
+@keyframes infiniteAnimation2 {
+  0% {
+      transform: translateX(0%);
+  }
+  100% {
+      transform: translateX(-200%);
+  }
+}
+.bannerWrap{
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+.banner{
+      display: flex;
+      padding: 0, 1.25rem;
+}
+.bannerTxtWhite {
+  font-size: 35px;
+  font-weight: bold;
+  margin-right: 50px;
+}
+
+.bannerTxtBlack {
+  font-size: 35px;
+  font-weight: bold;
+  color: #000;
+  margin-right: 50px;
+}
+.slide{
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stickyBox{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 400vh;
+}
+.sticky{
+  position: sticky;
+  height: 534px;
+  top:200px;
+  overflow: hidden;
+  
+}
+.slide1{
+  z-index: 4;
+}
+.slide2{
+  opacity: 0;
+  z-index: 3;
+}
+.slide3{
+  opacity: 0;
+  z-index: 2;
+}
+.slide4{
+  opacity: 0;
+  z-index: 1;
+}
+.hidden1{
+  animation: hidden1 0.3s linear alternate;
+  animation-fill-mode: forwards;
+}
+.visible{
+  opacity: 1;
+}
+@keyframes hidden1{
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }to{
+    transform: translateY(177px);
+    opacity: 0.6;
+  }
+}
+.hidden2{
+  animation: hidden2 0.3s linear alternate;
+  animation-fill-mode: forwards;
+}
+@keyframes hidden2{
+  from {
+    transform: translateY(177px);
+    opacity: 0.6;
+  }to{
+    transform: translateY(355px);
+    opacity: 0.3;
+  }
+}
+.hidden3{
+  animation: hidden3 0.3s linear alternate;
+  animation-fill-mode: forwards;
+}
+@keyframes hidden3{
+  from {
+    transform: translateY(355px);
+    opacity: 0.3;
+  }to{
+    transform: translateY(532px);
+    opacity: 0;
+  }
+}

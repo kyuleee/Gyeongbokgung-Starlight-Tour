@@ -14,7 +14,7 @@
 .moveWrapper{
     display: flex;
 }
-.slide{
+.slide5{
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
@@ -25,7 +25,7 @@
 .topCloneBox{
     animation: topCloneMove 40s linear infinite;
 }
-.slide.stop{
+.slide5.stop{
     animation-play-state: paused;
 }
 .moveBox{

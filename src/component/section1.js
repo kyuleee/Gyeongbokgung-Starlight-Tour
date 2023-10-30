@@ -10,7 +10,7 @@ const Section1 = () => {
                     <p className="section1Content">경복궁의 가장 깊은 곳 북측 권역의 문이 열립니다.</p>
                     <p className="section1Content">외소주방에서 궁중음식체험과 전통 공연을 즐기고,</p>
                     <p className="section1Content">전문 해설사와 함께 별빛 산책을 떠나보세요.</p>
-                    <a className="moreBtn">더보기</a>
+                    <a className="section1MoreBtn">더보기</a>
                 </div>
                 <div>
                     <table className="tableWrap">

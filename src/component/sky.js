@@ -96,40 +96,17 @@ function Sky(){
         const particlesMesh = new THREE.Points(particlesGeometry, particlesmaterial);
         scene.add(particlesMesh);
 
-        //mouse
-        document.addEventListener("mousemove", animateParticles);
-
-        let mouseX = 1;
-        let mouseY = 1;
-
-        function animateParticles(event) {
-            mouseY = event.clientY;
-            mouseX = event.clientX;
-        }
-
         const clock = new THREE.Clock();
 
         const animate = () => {
             window.requestAnimationFrame(animate);
-
-            const elapsedTime = clock.getElapsedTime();
-            // // Update objects
-            // particlesMesh.rotation.y = -1 * (elapsedTime * 0.1);
-            // particlesMesh.rotation.x = 1 * (elapsedTime * 0.1);
-            // particlesMesh.rotation.z = 0 * (elapsedTime * 0.1);
-            particlesMesh.rotation.y = 1;
-            particlesMesh.rotation.x = 1;
-            particlesMesh.rotation.z = 1;
-            if (mouseX > 0) {
-            particlesMesh.rotation.x = -mouseY * (elapsedTime * 0.00008);
-            particlesMesh.rotation.y = -mouseX * (elapsedTime * 0.00008);
-            }
-
+            const delta = clock.getDelta();
+            particlesMesh.rotation.x += delta/7;
+            particlesMesh.rotation.y -= delta/15;
+            particlesMesh.rotation.z -= delta/10;
             renderer.render(scene, camera);
         };
-
     animate();
-
   })
 
   return(

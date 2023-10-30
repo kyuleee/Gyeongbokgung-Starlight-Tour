@@ -31,13 +31,13 @@ const Section5 = () => {
             <article className="slideWrapper">
                     <div className="moveWrapper">
                          {/*State False면 Class가 Stop 으로 바뀌면서 멈춤 */}
-                        <ul className={"slide topOriginal" + (topMove ? "" : " stop")}>
+                        <ul className={"slide5 topOriginal" + (topMove ? "" : " stop")}>
                             {slides.map((s, i) => (
                                 <li className="moveBox" style={{background: `url(${s.background})`}} onMouseEnter={topOnStop} onMouseLeave={topOnRun} key={i}>
                                 </li>
                             ))}
                         </ul>
-                        <ul className={"slide topCloneBox" + (topMove ? "" : " stop")} >
+                        <ul className={"slide5 topCloneBox" + (topMove ? "" : " stop")} >
                             {slides.map((s, i) => (
                                 <li className="moveBox" style={{background: `url(${s.background})`}} onMouseEnter={topOnStop} onMouseLeave={topOnRun} key={i}>
                                 </li>
@@ -46,13 +46,13 @@ const Section5 = () => {
                     </div>
                     <div className="moveWrapper">
                          {/*State False면 Class가 Stop 으로 바뀌면서 멈춤 */}
-                        <ul className={"slide botOriginal" + (botMove ? "" : " stop")}>
+                        <ul className={"slide5 botOriginal" + (botMove ? "" : " stop")}>
                             {slides.map((s, i) => (
                                 <li className="moveBox" style={{background: `url(${s.background})`}} onMouseEnter={botOnStop} onMouseLeave={botOnRun} key={i}>
                                 </li>
                             ))}
                         </ul>
-                        <ul className={"slide botCloneBox" + (botMove ? "" : " stop")} >
+                        <ul className={"slide5 botCloneBox" + (botMove ? "" : " stop")} >
                             {slides.map((s, i) => (
                                 <li className="moveBox" style={{background: `url(${s.background})`}} onMouseEnter={botOnStop} onMouseLeave={botOnRun} key={i}>
                                 </li>

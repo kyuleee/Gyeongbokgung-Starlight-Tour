@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { useRef,useEffect } from 'react';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js'
-import model from '../srcImg/TEAM3.glb'
+import model from '../img/TEAM3.glb'
 
 
 const Palace = () => {
