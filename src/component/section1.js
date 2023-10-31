@@ -40,5 +40,4 @@ const Section1 = () => {
         </section>
      );
 }
- 
 export default Section1;

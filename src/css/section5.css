@@ -50,7 +50,7 @@
 }
 /* 아래 슬라이드*/
 .botOriginal{
-    animation: botOriginalMove 40s linear infinite normal none running;
+    animation: botOriginalMove 40s linear infinite;
 }
 .botCloneBox{
     animation: botCloneMove 40s linear infinite;

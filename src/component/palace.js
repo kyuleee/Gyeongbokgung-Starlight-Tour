@@ -4,7 +4,6 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js'
 import model from '../img/TEAM3.glb'
 
-
 const Palace = () => {
     const main = useRef()
     useEffect(() => {  
@@ -80,23 +79,19 @@ const Palace = () => {
     light4.castShadow = true; // default false
     scene.add( light4 );
 
-
-
-
-
     //Set up shadow properties for the light
     light.shadow.mapSize.width = 512; // default
     light.shadow.mapSize.height = 512; // default
     light.shadow.camera.near = 0.5; // default
     light.shadow.camera.far = 500; // default
 
-
     //마우스로 움직에 할 수 있음
     const controls = new OrbitControls( camera, renderer.domElement );
+    controls.enableZoom = false; //줌 삭제
+    controls.mouseButtons.RIGHT = null; //오른쪽 마우스 삭제
 
     //GLTF Loader
     let mixer;
-    
     const gltfLoader = new GLTFLoader();
     gltfLoader.load(model, (gltf)=>{
         const imgs = gltf.scene.children[0];
@@ -107,14 +102,8 @@ const Palace = () => {
         imgs.castShadow = true; //default is false
         imgs.receiveShadow = false; //default
         mixer = new THREE.AnimationMixer()
-        const actions = [];
-        actions[0] = mixer.clipAction(imgs.animation[0]);
-        actions[1] = mixer.clipAction(imgs.animation[1]);
-        actions[2] = mixer.clipAction(imgs.animation[2]);
- 
+
     })
-
-
     //애니메이션
     const clock = new THREE.Clock();
     const animate = ()=>{
@@ -123,6 +112,8 @@ const Palace = () => {
         controls.minDistance =4;
         controls.maxDistance =6;
         controls.rotateSpeed = 0.5;
+        controls.minPolarAngle = Math.PI / 3 //최소 각도
+        controls.maxPolarAngle = Math.PI /1.4 // 최대 각도
         controls.zoomSpeed = 0.5;
         if(mixer) mixer.update(time);
         renderer.render(scene,camera);
@@ -143,5 +134,4 @@ const Palace = () => {
         <div className='palace' ref={main}></div>
      );
 }
- 
 export default Palace;

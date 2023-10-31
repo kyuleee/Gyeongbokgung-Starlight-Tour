@@ -4,50 +4,48 @@
     margin: 0 auto;
 } 
 .sec4Padding{
-    padding: 15.625rem 0rem;
+    padding: 250px 0px;
 }
 .section4Aticle{
     width: 50%;
 }
 h1{
-    font-size: 5rem;
+    font-size: 80px;
     font-weight:700; 
 }
 .sec4MoreBtn{
-    margin-top: 26.25rem;
+    margin-top: 420px;
 }
 .notice{
     position: relative;
-    padding: 2.875rem 0;
-    border-top: 0.0625rem solid white;
+    padding: 46px 0;
+    border-top: 1px solid white;
     cursor: pointer;
-}
-.notice:hover p{
-    color: black;
-    font-weight: bold;
-}
-
-.notice::after {
-    position: absolute;
-    content: "";
-    display: block;
-    top:0;
-    left: 0;
-    width: 0;
-    height: 100%; 
-    background-color: #fff;
-    transition:0.4s linear; 
-    z-index: -1;
-  }
-  
-.notice:hover::after {
-    width: 100%;
 }
 
 .notice:last-of-type{
-    border-bottom:0.0625rem solid white;
+    border-bottom:1px solid white;
 }
 .notice p{
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: 400;
 }
+
+@media (max-width: 1500px){
+    .section4 { width: 90%; }
+     h1 {font-size: calc(100vw * (80/1500));}
+    .notice p {font-size: 18px;}
+    
+  }
+  
+
+@media (max-width: 1024px){
+    .section4 { width: 90%;}
+     h1 {margin: 0px 25%; font-size: calc(100vw * (80/1500));}
+    .notice p {font-size: 18px;}
+    .flex{display: block;}
+    .section4Aticle{width: 100%;}
+    .sec4MoreBtn{margin:60px 33%}
+    .notice{display: flex;}
+}
+  

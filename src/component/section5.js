@@ -12,7 +12,6 @@ const Section5 = () => {
     const botOnStop = () => setBotMove(false);
     const botOnRun = () => setBotMove(true);
 
-
     const slides = [
         { background: 'img/gallery_img1.jpg', target: "#" },
         { background: 'img/gallery_img2.jpg', target: "#" },
@@ -45,7 +44,6 @@ const Section5 = () => {
                         </ul>
                     </div>
                     <div className="moveWrapper">
-                         {/*State False면 Class가 Stop 으로 바뀌면서 멈춤 */}
                         <ul className={"slide5 botOriginal" + (botMove ? "" : " stop")}>
                             {slides.map((s, i) => (
                                 <li className="moveBox" style={{background: `url(${s.background})`}} onMouseEnter={botOnStop} onMouseLeave={botOnRun} key={i}>

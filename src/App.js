@@ -13,10 +13,7 @@ import Footer from "./component/footer";
 
 
 
-
-
 function App() {
-
   return(
     <div>
         <section>
@@ -33,7 +30,5 @@ function App() {
         <Footer />
     </div>
   );
-
 } 
-
 export default App;

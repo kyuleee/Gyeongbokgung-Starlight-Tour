@@ -1,7 +1,16 @@
 import "../css/footer.css";
+import {Link} from 'react-router-dom'
 
 const Footer = () => {
-  
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          window.scrollTo({
+            top: section.offsetTop,
+            behavior: 'smooth',
+          });
+        }
+      };
     return ( 
         <footer className='w1500'>
             <div className='footerLeft'>
@@ -18,14 +27,13 @@ const Footer = () => {
                 <p className="copy">Copyright(c) 2023 Gyeongbokgung Night Trip. All right reserved</p>
             </div>
             <ul className='fnb'>
-                <li data-num='1'>별빛야행 소개</li>
-                <li data-num='2'>메인 프로그램</li>
-                <li data-num='3'>경복궁 행사</li>
-                <li data-num='4'>커뮤니티</li>
-                <li data-num='5'>갤러리</li>
+                <li onClick={() => scrollToSection('section1')}>별빛야행 소개</li>
+                <li onClick={() => scrollToSection('section2')}>메인 프로그램</li>
+                <li onClick={() => scrollToSection('section3')}>경복궁 행사</li>
+                <li onClick={() => scrollToSection('section4')}>커뮤니티</li>
+                <li onClick={() => scrollToSection('section5')}>갤러리</li>
             </ul>
         </footer>
      );
 }
- 
 export default Footer;
