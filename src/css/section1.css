@@ -75,7 +75,7 @@
         width: 100%;
     }
     .section1Title{
-        font-size: calc(100vw * (80 / 1024));
+        font-size: calc(100vw * (80 / 1300));
     }
 }
 @media (max-width:820px) {

@@ -50,10 +50,19 @@
   top: 90px;
   right: -1000px ;
   transition: all 1.5s;
-  background-color: aqua;
+  background-color: #000;
+  z-index: 9999;
   display: none;
   opacity: 0;
   padding: 10px 40px;
+}
+.openHam>div{
+  padding: 40px 0;
+  border-top: 1px solid #fff;
+  cursor: pointer;
+}
+.openHam>div:last-child{
+  border-bottom: 1px solid #fff;
 }
 .clickOpen{
   right: 0;

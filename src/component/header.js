@@ -1,18 +1,15 @@
 import { Link, useState } from 'react';
 import '../css/header.css'
 
+
 const Header  = () => {
   //public에 있는 이미지 가져 올 수 있는 함수
   const imgUrl = process.env.PUBLIC_URL
-
   const [hamMenuOpen, setHamMenuOpen] = useState(false)
   const clickHamMenu = ()=>{
     setHamMenuOpen(!hamMenuOpen)
   }
-  
-
-
-    return ( 
+    return (
       <header className="stickyHead">
         <img alt='로고' className="headerLogo" src={imgUrl + 'img/Logo_white.png'}></img>
         <ul>
@@ -33,9 +30,23 @@ const Header  = () => {
         </div>
         {/* 오른쪽에서 나오는 햄버거 메뉴임 */}
         <div className={`openHam ${hamMenuOpen ? "clickOpen" : ""}`}>
+          <div>
+            <p>별빛야행 소개</p>
+          </div>
+          <div>
+            <p>메인 프로그램 소개</p>
+          </div>
+          <div>
+            <p>관련 행사 소개</p>
+          </div>
+          <div>
+            <p>갤러리</p>
+          </div>
+          <div>
+            <p>커뮤니티</p>
+          </div>
         </div>
       </header>
      );
 }
- 
 export default Header;
