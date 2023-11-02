@@ -1,4 +1,4 @@
-import '../css/login.css';
+import './login.css';
 import topImg from '../img/headerImg.png';
 
 const Login = () => {

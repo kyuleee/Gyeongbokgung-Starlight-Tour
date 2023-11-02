@@ -1,0 +1,46 @@
+.tabWrap{
+    text-align: center;
+    /* margin-top: 150px; */
+    margin: 150px 0 80px;
+}
+.tabWrap>nav{
+    position: relative;
+    width: 480px;
+    height: 65px;
+    margin: 0 auto;
+    border-radius: 50px;
+    border: 2px solid white;
+}
+.tabWrap>nav>ul{
+    display: flex;
+    /* justify-content: space-between; */
+    /* text-align: center; */
+    height: 100%;
+    margin: 0 auto;
+}
+.tabWrap>nav>ul a{
+    width: calc(100% / 3 + 2px);
+    height: 100%;
+    font-size: 18px;
+    padding: 20px 30px;
+}
+.listTit{
+    width: 100%;
+}
+.listTit>tr{
+    line-height: 70px;
+    /* vertical-align: middle; */
+    text-align: center;
+}
+.notNum{
+    width: 100px;
+}
+.notTit{
+    width: 60%;
+}
+.notName{
+    width: 100px;
+}
+.notDate{
+    width: calc(100% - (200px + 60%));
+}

@@ -1,4 +1,5 @@
 import "../css/section2.css";
+import { Link } from 'react-router-dom';
 import bannerArrow from '../img/bnr_arr.png'
 import programImg1 from '../img/img1.jpg';
 import programImg2 from '../img/img2.jpg';
@@ -66,7 +67,7 @@ const Section2 = () => {
                 <div className="stickyBox">
                     <div className="sticky2">
                         <h1 className="programH1">경복궁 프로그램</h1>
-                        <button className="programMoreBtn">더보기</button>
+                        <Link to="/Program"><button className="programMoreBtn">더보기</button></Link>
                         <div className={`slideBox
                            ${isSlideUp1 ? 'slideBox' : 'up1'}
                            ${isSlideUp2 ? 'slideBox' : 'up2'}

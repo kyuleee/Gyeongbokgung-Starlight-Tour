@@ -50,16 +50,16 @@ footer{
 .fnb>li{
     cursor: pointer;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 35px;
-    color: #808080;
+    color: #fff;
     /* transition: all 0.1s; */
 }
 .fnb>li:hover{
-    color: #fff;
+transform: translateY(-5px);
 }
 .fnb>li:active{
-    color: red;
+    color: #fff;
 }
 .copy{
     padding: 30px 0;

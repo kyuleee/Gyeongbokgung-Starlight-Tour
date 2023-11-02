@@ -4,18 +4,12 @@ import Section3 from "./section3";
 import Section4 from './section4';
 import Section5 from './section5'
 import Palace from './palace';
-import Top from './top';
-import Header from './header';
-
 
 const Main = () => {
+
     return ( 
         <div>
-            <section>
-
             <Palace />
-
-            </section>
             <Section1/>
             <Section2/>
             <Section3/>

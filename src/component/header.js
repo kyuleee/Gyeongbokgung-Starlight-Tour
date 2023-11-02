@@ -20,39 +20,41 @@ const Header  = () => {
 
     return (
       <header className="stickyHead">
-        <Link to="/"><img alt='로고' className="headerLogo" src={imgUrl + 'img/Logo_white.png'}></img></Link>
-        <ul>
-          <Link to="/Guide"><li>별빛야행 소개</li></Link>
-          <Link to="/Program"><li>메인 프로그램</li></Link>
-          <Link to="/Event"><li>경복궁 행사</li></Link>
-          <Link to="/Gallery"><li>갤러리</li></Link>
-          <Link to="/NoticeList"><li>커뮤니티</li></Link>
-        </ul>
-        <div className="headRight">
-          <img  alt='로그인 아이콘' className="loginIcon" src={imgUrl + `img/login.png`}></img>
-          <p>ENG</p>
-          <div className='hamMenu' onClick={clickHamMenu}>
-            <div className={`topHamMenu ${hamMenuOpen ? "openTopHam" : ""}`}></div>
-            <div className={`centerHamMenu ${hamMenuOpen ? "openCenterHam" : ""}`}></div>
-            <div className={`botHamMenu ${hamMenuOpen ? "openbotHam" : ""}`}></div>
+        <div className='stickyWebNav'>
+          <Link to="/"><img alt='로고' className="headerLogo" src={imgUrl + 'img/Logo_white.png'}></img></Link>
+          <ul>
+            <Link to="/Guide"><li>별빛야행 소개</li></Link>
+            <Link to="/Program"><li>메인 프로그램</li></Link>
+            <Link to="/Event"><li>경복궁 행사</li></Link>
+            <Link to="/Gallery"><li>갤러리</li></Link>
+            <Link to="/NoticeList"><li>커뮤니티</li></Link>
+          </ul>
+          <div className="headRight">
+            <Link to="/Login"><img  alt='로그인 아이콘' className="loginIcon" src={imgUrl + `img/login.png`}></img></Link>
+            <p>ENG</p>
+            <div className='hamMenu' onClick={clickHamMenu}>
+              <div className={`topHamMenu ${hamMenuOpen ? "openTopHam" : ""}`}></div>
+              <div className={`centerHamMenu ${hamMenuOpen ? "openCenterHam" : ""}`}></div>
+              <div className={`botHamMenu ${hamMenuOpen ? "openbotHam" : ""}`}></div>
+            </div>
           </div>
         </div>
         {/* 오른쪽에서 나오는 햄버거 메뉴임 */}
         <div className={`openHam ${hamMenuOpen ? "clickOpen" : ""}`}>
           <div>
-            <p>별빛야행 소개</p>
+          <Link to="/Guide"><p>별빛야행 소개</p></Link>
           </div>
           <div>
-            <p>메인 프로그램 소개</p>
+          <Link to="/Program"><p>메인 프로그램</p></Link>
           </div>
           <div>
-            <p>관련 행사 소개</p>
+          <Link to="/Event"><p>경복궁 행사</p></Link>
           </div>
           <div>
-            <p>갤러리</p>
+          <Link to="/Gallery"><p>갤러리</p></Link>
           </div>
           <div>
-            <p>커뮤니티</p>
+          <Link to="/NoticeList"><p>커뮤니티</p></Link>
           </div>
         </div>
       </header>

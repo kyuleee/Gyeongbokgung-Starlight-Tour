@@ -1,5 +1,5 @@
 import '../pageCss/section2_subPage.css'
-import headerImg1 from '../img/headerImg.png';
+import headerImg from '../img/headerImg.png';
 import programImg1a from '../img/img1.jpg';
 import programImg1b from '../img/img5.png';
 import programImg2a from '../img/img6.png';
@@ -16,7 +16,7 @@ const Section2_subPage = () => {
         <section className='section2_subPage'>
             <div className='w1500'>
                 <div className='section2SubHeader'>
-                    <div><img src={headerImg1}></img></div>
+                    <div><img src={headerImg}></img></div>
                     <h2>메인 프로그램</h2>
                 </div>
                 <div className='section2SubTop'>

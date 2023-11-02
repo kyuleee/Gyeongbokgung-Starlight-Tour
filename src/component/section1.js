@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import "../css/section1.css";
 
 const Section1 = () => {
@@ -10,7 +11,7 @@ const Section1 = () => {
                     <p className="section1Content">경복궁의 가장 깊은 곳 북측 권역의 문이 열립니다.</p>
                     <p className="section1Content">외소주방에서 궁중음식체험과 전통 공연을 즐기고,</p>
                     <p className="section1Content">전문 해설사와 함께 별빛 산책을 떠나보세요.</p>
-                    <a className="section1MoreBtn">더보기</a>
+                    <Link to="/Guide"><a className="section1MoreBtn">더보기</a></Link>
                 </div>
                 <div>
                     <table className="tableWrap">

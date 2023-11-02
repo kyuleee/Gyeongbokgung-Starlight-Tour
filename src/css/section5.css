@@ -74,6 +74,7 @@
   }
 @media (max-width:1024px) {
     .section5Title{
+        margin: 0 0 150px;
         font-size: calc( 100vw * (80 / 1024));
     } 
     .moveBox{
