@@ -1,6 +1,6 @@
-import "./css/reset.css";
 import "./App.css";
-import {Routes, Route, Link} from 'react-router-dom'
+import "./css/reset.css";
+import {Routes, Route} from 'react-router-dom'
 import Sky from './component/sky'
 import Top from "./component/top"
 import Header from "./component/header"
@@ -18,14 +18,15 @@ function App() {
           <Sky />
         <Routes>
           <Route path="/" element={<><Top/><Header/><Main/></>}/>
-          <Route path="/1" element={<><Header/><Section1_subPage/></>}/>
-          <Route path="/2" element={<><Header/><Section2_subPage/></>}/>
-          <Route path="/3" element={<><Header/><Section3_subPage/></>}/>
-          <Route path="/" element={<></>}/>
-          <Route path="/" element={<></>}/>
-          <Route path="/" element={<></>}/>
-          <Route path="/" element={<></>}/>
-          <Route path="/" element={<></>}/>
+          <Route path="/Guide" element={<><Header/><Section1_subPage/></>}/>
+          <Route path="/Program" element={<><Header/><Section2_subPage/></>}/>
+          <Route path="/Event" element={<><Header/><Section3_subPage/></>}/>
+          <Route path="/NoticeList" element={<></>}/>
+          <Route path="/NoticeWrite" element={<></>}/>
+          <Route path="/FAQ" element={<></>}/>
+          <Route path="/Gallery" element={<></>}/>
+          <Route path="/Login" element={<></>}/>
+          <Route path="/Join" element={<></>}/>
         </Routes>
         <Footer />
     </div>

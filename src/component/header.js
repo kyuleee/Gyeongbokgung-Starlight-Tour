@@ -1,5 +1,7 @@
-import { Link, useState } from 'react';
+import { Link, useLocation} from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import '../css/header.css'
+
 
 
 const Header  = () => {
@@ -9,15 +11,22 @@ const Header  = () => {
   const clickHamMenu = ()=>{
     setHamMenuOpen(!hamMenuOpen)
   }
+
+  // Link 눌렀을 때 다른페이지에서 Top 0 시작
+  const location = useLocation()
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[location])
+
     return (
       <header className="stickyHead">
-        <img alt='로고' className="headerLogo" src={imgUrl + 'img/Logo_white.png'}></img>
+        <Link to="/"><img alt='로고' className="headerLogo" src={imgUrl + 'img/Logo_white.png'}></img></Link>
         <ul>
-          {/* <li><Link to='/mainIntro'>별빛야행 소개</Link></li> */}
-          <li>메인 프로그램</li>
-          <li>경복궁 행사</li>
-          <li>갤러리</li>
-          <li>커뮤니티</li>
+          <Link to="/Guide"><li>별빛야행 소개</li></Link>
+          <Link to="/Program"><li>메인 프로그램</li></Link>
+          <Link to="/Event"><li>경복궁 행사</li></Link>
+          <Link to="/Gallery"><li>갤러리</li></Link>
+          <Link to="/NoticeList"><li>커뮤니티</li></Link>
         </ul>
         <div className="headRight">
           <img  alt='로그인 아이콘' className="loginIcon" src={imgUrl + `img/login.png`}></img>
