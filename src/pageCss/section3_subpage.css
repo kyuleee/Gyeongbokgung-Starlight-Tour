@@ -80,7 +80,10 @@
     left: calc(100% + 50px);
     opacity: 1;
   }
-  @media (max-width:1500px) {
+  @media (max-width:1520px) {
+    .w1500{
+        width: 90%;
+    }
     .sub3TitleArticle>h1{
         font-size: calc(100vw * (80 / 1500));
     }

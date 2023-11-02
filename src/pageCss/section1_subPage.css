@@ -1,0 +1,378 @@
+.infoTit{
+    padding: 114px 0 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #888;
+}
+.infoTit>img{
+    width: 300px;
+    /* width: 25vw; */
+    height: auto;
+}
+.infoTit>h3{
+    font-size: 40px;
+    margin-top: 50px;
+}
+.section1_subPage h2{
+    font-size: 80px;
+}
+.slogan{
+    text-align: center;
+    padding: 200px 0 100px;
+    font-weight: bold;
+}
+.slogan>img{
+    width: 500px;
+    height: auto;
+}
+.slogan>h3{
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.slogan>p{
+    margin-bottom: 25px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+.slogan>p>span{
+    color: aqua;
+}
+.mainInfo{
+    padding: 200px 0;
+    display: flex;
+}
+.mainInfo>*{
+    width: 50%;
+}
+.mainInfo>h2>span{
+    display: block;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    margin-top: 15px;
+}
+.mainInfo>ul>li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 28px;
+}
+.mainInfo b{
+    width: 20%;
+    border: 1px solid #fff;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    margin-right: 60px;
+    text-align: center;
+    white-space: nowrap;
+    word-break: break-all;
+}
+.mainInfo>ul>li>span{
+    font-size: 18px;
+    line-height: 1.5;
+}
+/* ////스케줄//// */
+.schedule{
+    padding: 200px 0;
+}
+.schedule>h2{
+    text-align: center;
+    margin-bottom: 100px;
+}
+.table{
+    width: 100%;
+    padding: 60px 0;
+    position: relative;
+}
+.table::before{
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    background:rgba(255, 255, 255, 0.3) ;
+    content: '';
+}
+.table img{
+    width:40%; height: auto;
+    margin-bottom: 20px;
+}
+.table>ul>li{
+    position: relative;
+    width: 50%;
+}
+.table>ul>li:nth-child(odd){
+    margin-left: 50%;
+    padding-left: 50px;
+}
+.table>ul>li:nth-child(even){
+    margin-right: 50%;
+    padding-right: 50px;
+    text-align: right;
+}
+.table>ul>li:after{
+    width: 17px; height: 17px;
+    display: block;
+    content: '';
+    border-radius: 100%;
+    background-color: #a5a5a5;
+    position: absolute;
+    top: 14px;
+}
+.table>ul>li:nth-child(odd)::after{
+    left: -9px;
+}
+.table>ul>li:nth-child(even)::after{
+    right: -9px;
+}
+.eventTxtBox>p:first-child{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.eventTxtBox>p:nth-child(2){
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.eventTxtBox>p:last-child{
+    font-size: 18px;
+}
+
+/* //////오시는 길/////////// */
+.secMap{
+    padding: 200px 0;
+    text-align: center;
+}
+.secMap>h2{
+    margin-bottom: 100px;
+}
+/* /////대중교통///////// */
+.pblcTrnsp{
+    padding: 200px 0;
+}
+.pblcTrnsp>ul{
+    margin-top: 40px;
+}
+.pblcTrnsp>ul>li{
+    display: flex;
+    align-items: center;
+}
+.vehicle{
+    width: 7.5em;
+    padding: 1.75em 0 1.25em;
+    border: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.vehicle>img{
+    max-width: 100%;
+    /* height: auto; */
+    margin-bottom: 15px;
+}
+.pblcTrnsp ol{
+    margin-left: 30px;
+}
+.pblcTrnsp ol>li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.pblcTrnsp ol>li:last-child{
+    margin-bottom: 0;
+}
+.pblcTrnsp ol>li>b{
+    border-radius: 3em;
+    margin-right: 1em;
+    font-size: 0.8em;
+    width: 4.3em;
+    padding: 0.3em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pblcTrnsp ol>li>p{
+    font-size: 18px;
+}
+.line3{
+    background-color: #fe5b10;
+}
+.line5{
+    background-color: #8b50a4;
+}
+.villageBus{
+    background-color: #53b332;
+}
+@media (max-width:1500px) {
+    .section1_subPage h2{
+        font-size: calc(100vw * (80 / 1500));
+    }
+    .slogan{
+        padding: 150px 0;
+    }
+    .slogan>img{
+        width: 360px;
+    }
+    .mainInfo{
+        padding: 150px 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .mainInfo>*{
+        width: 50%;
+        /* text-align: center; */
+    }
+    .mainInfo>h2{
+        margin-bottom: 50px;
+    }
+    .mainInfo>ul{
+        margin-left: 30px;
+        width: auto;
+    }
+    .mainInfo b{
+        width:100px;
+    }
+    .schedule{
+        padding: 150px 0;
+    }
+    .secMap{
+        padding: 150px 0;
+    }
+}
+
+@media (max-width:1024px) {
+    .section1_subPage h2{
+        font-size: calc(100vw * (80 / 1024));
+    }
+   
+    .slogan>h3{
+        font-size: calc(100vw * (40 / 1024));
+    }
+    .slogan>p{
+        font-size: 18px;
+    }
+}
+
+@media (max-width:820px) {
+    .section1_subPage h2{
+        font-size: calc(100vw * (50 / 820));
+    } 
+    .infoTit>img{
+        width: 40vw;
+        height: auto;
+    }
+    .infoTit>h3{
+        font-size: 30px;
+        margin-top: 30px;
+    }
+    .slogan>h3{
+        font-size: 30px
+    }  
+    .slogan>img{
+        width: 50vw;
+        height: auto;
+    }
+    .mainInfo b{
+        font-size: 16px;
+        margin-right: 40px;
+    }
+    .mainInfo>ul>li>span{
+        font-size: 16px;
+    }
+    .eventTxtBox>p:first-child{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .eventTxtBox>p:nth-child(2){
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .eventTxtBox>p:last-child{
+        font-size: 16px;
+    }
+    .table>ul>li:nth-child(odd){
+        padding-left: 5%;
+    }
+    .table>ul>li:nth-child(even){
+        padding-right: 5%;
+    }
+    .pblcTrnsp>ul>li{
+        flex-direction: column;
+    }
+    .vehicle{
+        width: 90px;
+        padding: 10px 0;
+        margin-bottom: 10px;
+    }
+    .vehicle>img{
+        max-width: 100%;
+        /* height: auto; */
+        margin-bottom: 15px;
+    }
+    .pblcTrnsp ol{
+        margin-left: 0;
+        width: 100%;    
+    }
+    .pblcTrnsp ol>li>b{
+        white-space: nowrap;
+        min-width: 4.3em;
+    }
+    .pblcTrnsp>h2{
+        text-align: center;
+    }
+
+}
+@media (max-width:480px){
+    .infoTit>h3{
+        font-size: calc(100vw * (30 / 480));
+    }
+    .slogan{
+        padding: 100px 0;
+    }
+    .slogan>p{
+        font-size: 16px;
+    }
+    .slogan>h3{
+        font-size: 25px
+    } 
+    .mainInfo{
+        padding: 100px 0;
+    }
+    .schedule{
+        padding: 100px 0;
+    }
+    .secMap{
+        padding: 100px 0;
+    }
+    .pblcTrnsp{
+        padding: 100px 0;
+    }
+    .mainInfo b{
+        width: 20%;
+        margin-right: 20px;
+        font-size: 14px;
+        
+    }
+    .mainInfo>ul>li>span{
+        font-size: calc(100vw * (16 / 480));
+    }
+    .eventTxtBox>p:first-child{
+        font-size: calc(100vw * (18 / 480));
+        margin-bottom: 15px;
+    }
+    .eventTxtBox>p:nth-child(2){
+        font-size: calc(100vw * (16 / 480));
+        margin-bottom: 5px;
+    }
+    .eventTxtBox>p:last-child{
+        font-size: calc(100vw * (16 / 480));
+    }
+    .pblcTrnsp ol>li>p{
+        font-size: calc(100vw * (18 / 480));
+    }
+}

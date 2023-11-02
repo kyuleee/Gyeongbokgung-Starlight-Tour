@@ -114,7 +114,7 @@ canvas{
   width: 1500px;
   margin: 0 auto;
 }
-@media (max-width:1500px) {
+@media (max-width:1520px) {
   .w1500{
       width: 90%;
   }

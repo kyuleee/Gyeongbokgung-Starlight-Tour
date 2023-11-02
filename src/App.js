@@ -1,36 +1,32 @@
-import "./App.css";
 import "./css/reset.css";
+import "./App.css";
+import {Routes, Route, Link} from 'react-router-dom'
 import Sky from './component/sky'
-import Palace from './component/palace'
 import Top from "./component/top"
 import Header from "./component/header"
-import Section1 from './component/section1'
-import Section2 from './component/section2';
-import Section3 from "./component/section3";
-import Section4 from './component/section4';
-import Section5 from './component/section5'
 import Footer from "./component/footer";
+import Main from "./component/main"
 
 //Pages
-import Section3_subpage from "./page/section3_subpage";
-
+import Section1_subPage from "./page/section1_subPage";
+import Section2_subPage from "./page/section2_subPage";
+import Section3_subPage from "./page/section3_subPage";
 
 function App() {
   return(
     <div>
-        <section>
           <Sky />
-          {/* <Palace /> */}
-        </section>
-        {/* <Top/> */}
-        <Header/>
-        {/* <Section1/>
-        <Section2/>
-        <Section3/>
-        <Section4/>
-        <Section5/> */}
-        <Section3_subpage/>
-
+        <Routes>
+          <Route path="/" element={<><Top/><Header/><Main/></>}/>
+          <Route path="/1" element={<><Header/><Section1_subPage/></>}/>
+          <Route path="/2" element={<><Header/><Section2_subPage/></>}/>
+          <Route path="/3" element={<><Header/><Section3_subPage/></>}/>
+          <Route path="/" element={<></>}/>
+          <Route path="/" element={<></>}/>
+          <Route path="/" element={<></>}/>
+          <Route path="/" element={<></>}/>
+          <Route path="/" element={<></>}/>
+        </Routes>
         <Footer />
     </div>
   );

@@ -38,7 +38,7 @@ p {
   position: relative;
   width: 200px;
   height: 60px;
-  margin-top: 394px;
+  margin-top: 300px;
   border: 1px solid rgba(255, 255, 255, 0.7);
   background-color: transparent;
   font-size: 24px;
@@ -177,23 +177,24 @@ p {
   transform: translateY(0%);
 }
 @media (max-width: 1500px){
-  .section2 { width: 90%; }
+  /* .section2 { width: 90%; } */
   .programH1 {font-size: calc(100vw * (80/1500));}
   .programH2 {font-size: calc(100vw * (40/1500));}
   .programImgbox img{height:calc(534px * 0.7);}
+  .programMoreBtn {margin-top: 230px;}
   .sticky2{
     height:calc(534px * 0.7);
     top:200px;
   }
 }
 @media (max-width: 1024px){
-  .section2 { width: 90%;}
+  /* .section2 { width: 90%;} */
   .programH1 {font-size: calc(100vw * (80/1500));}
   .programH2 {margin-top: 70px; font-size: calc(100vw * (30/1024));}
   .programImgbox img{height:328px;}
   .sticky2{height:595px; top:225px;}
   .slide{display: block;}
   .section2Aticle{margin-top: 20px; width: 100%;}
-  .programMoreBtn {margin-top: 483px;}
+  .programMoreBtn {margin-top: 480px;}
   .stickyBox{height: 300vh;}
 }

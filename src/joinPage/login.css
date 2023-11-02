@@ -1,0 +1,72 @@
+input{
+    border: none;
+    outline: none;
+    background:none;
+}
+.titBox{
+    padding: 200px 0 30px;
+    border-bottom: 1px solid #fff;
+    font-size: 40px;
+    font-weight: normal;
+}
+.loginArea{
+    width: 430px;
+    margin: 60px auto 100px;
+}
+.loginArea>div:first-child{
+    border: 1px solid #fff;
+    border-bottom: none;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+.tabContent{
+    margin-top: 50px;
+}
+.formItem>div:first-child{
+    margin-bottom: 10px;
+}
+.formItem input{
+    width: 100%;
+    height: 42px;
+    padding: 0 20px;
+    font-size: 15px;
+    border: 1px solid #fff;
+    letter-spacing: -0.2px;
+}
+.chkBox{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.chkBox input[type='checkbox']{
+    margin: 0;
+}
+.chkBox label{
+    margin-left: 5px;
+}
+.btnWrap input{
+    width: 100%;
+    height: 58px;
+    line-height: 58px;
+    font-size: 18px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+.btnWrap>div{
+    margin-top: 20px;
+}
+@media (max-width:480px) {
+    .loginArea{
+        width: 100%;
+    }
+    .titBox{
+        font-size: calc(100vw * (40 / 480));
+    }
+    .loginArea>div:first-child{
+        font-size: calc(100vw * (40 / 480));
+    }
+}
