@@ -1,3 +1,23 @@
+/* .tabWrap{
+    text-align: center;
+}
+.tabWrap>nav{
+    overflow: hidden;
+    max-width: 480px;
+    position: relative;
+}
+.tabWrap>nav>ul{
+    display: flex;
+}
+.bef{
+    background-color: #f9d235;
+    position: absolute;
+    top: 0;
+    width: calc(100% / 3 + 2px); height: 100%;
+    border-radius:1000px ;
+    transition: all 0.3s;
+} */
+/* ///////////////////////// */
 .tabWrap{
     text-align: center;
     /* margin-top: 150px; */
@@ -29,8 +49,20 @@
 }
 .listTit>tr{
     line-height: 70px;
-    /* vertical-align: middle; */
     text-align: center;
+}
+.listTit>tr{
+    width: 100%;
+}
+.NewList{
+    background-color: aqua;
+    width: 100%;
+}
+.NewList>a{
+    width: 100% !important;
+    display: inline-block;
+    display: flex;
+    background-color: red;
 }
 .notNum{
     width: 100px;
@@ -41,6 +73,25 @@
 .notName{
     width: 100px;
 }
+.notNum1{
+    width: 100px;
+    display: block;
+}
+.notTit1{
+    width: 60%;
+    display: block;
+}
+.notName1{
+    width: 100px;
+    display: block;
+}
+
 .notDate{
     width: calc(100% - (200px + 60%));
+}
+.notDate1{
+    width: calc(100% - (200px + 60%));
+}
+.NewList{
+    width: 100%;
 }

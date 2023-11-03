@@ -1,22 +1,24 @@
-import { Link, useLocation} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import '../css/header.css'
-
-
 
 const Header  = () => {
   //public에 있는 이미지 가져 올 수 있는 함수
   const imgUrl = process.env.PUBLIC_URL
+  //메뉴바 토글
   const [hamMenuOpen, setHamMenuOpen] = useState(false)
   const clickHamMenu = ()=>{
     setHamMenuOpen(!hamMenuOpen)
   }
 
+  const closeHamMenu = ()=>{
+    setHamMenuOpen(false)
+  }
+
   // Link 눌렀을 때 다른페이지에서 Top 0 시작
-  const location = useLocation()
   useEffect(()=>{
     window.scrollTo(0,0)
-  },[location])
+  })
 
     return (
       <header className="stickyHead">
@@ -42,19 +44,19 @@ const Header  = () => {
         {/* 오른쪽에서 나오는 햄버거 메뉴임 */}
         <div className={`openHam ${hamMenuOpen ? "clickOpen" : ""}`}>
           <div>
-          <Link to="/Guide"><p>별빛야행 소개</p></Link>
+          <Link to="/Guide" onClick={closeHamMenu}><p>별빛야행 소개</p></Link>
           </div>
           <div>
-          <Link to="/Program"><p>메인 프로그램</p></Link>
+          <Link to="/Program" onClick={closeHamMenu}><p>메인 프로그램</p></Link>
           </div>
           <div>
-          <Link to="/Event"><p>경복궁 행사</p></Link>
+          <Link to="/Event" onClick={closeHamMenu}><p>경복궁 행사</p></Link>
           </div>
           <div>
-          <Link to="/Gallery"><p>갤러리</p></Link>
+          <Link to="/Gallery" onClick={closeHamMenu}><p>갤러리</p></Link>
           </div>
           <div>
-          <Link to="/NoticeList"><p>커뮤니티</p></Link>
+          <Link to="/NoticeList" onClick={closeHamMenu}><p>커뮤니티</p></Link>
           </div>
         </div>
       </header>

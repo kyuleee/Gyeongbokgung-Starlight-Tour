@@ -1,0 +1,133 @@
+.joinWrap{
+    margin-bottom: 300px;
+}
+.joinWrap>h3{
+    line-height: 1.5;
+    font-size: 20px;
+}
+.joinWrap span{
+    color: #ff0000;
+}
+.r_impor{
+    text-align: right;
+}
+.signUpTable{
+    margin-top: 10px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+}
+.signUpTable li{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #888;
+    width: 100%;
+}
+.signUpTable li:last-child{
+    border: none;
+}
+.signUpTable li>label{
+    width: 20%;
+    padding-left: 20px;
+    box-sizing: border-box;
+    font-size: 18px;
+    color: #555555;
+}
+.inbx{
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+.inbx>input{
+    height: 45px;
+    font-size: 14px;
+    padding: 0 10px;
+    border: 1px solid #dddddd;
+    outline: 0;
+    width: 65%;
+}
+.inbx>p{
+    font-size: 14px;
+    color: #ff0000;
+    margin-left: 15px;
+}
+textarea{
+    resize: none;
+    background: none;
+    border: none;
+}
+button{
+    border: none;
+    background: none;
+    outline: none;
+}
+.tabx{
+    padding: 5px 0;
+    width: 80%;
+}
+.tabx textarea{
+    border: 1px solid #ddd;
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+    height: 185px;
+}
+.pri{
+    margin-top: 90px;
+}
+.cont1{
+    margin-top: 20px;
+    height: 400px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    overflow-y: auto;
+}
+.ck{
+    margin-top: 20px;
+    text-align: right;
+}
+.ck>input[type='checkbox']{
+    margin-right: 1vw;
+}
+.saveBtn{
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    margin:50px auto 0;
+    width: 160px;height: 60px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+@media (max-width:768px){
+    .joinWrap>h3 {
+        font-size: 16px;
+    }
+    .signUpTable li{
+        padding: 5px 0;
+
+    }
+    .inbx{
+        display: block;
+    }
+    .inbx>input{
+        width: 100%;
+    }
+    .inbx>p{
+        margin: 5px 0 0;
+    }
+    .signUpTable li>label{
+        /* width: 20%; */
+        padding-left: 10px;
+        font-size: calc(100vw * (20 / 768));
+    }
+    .pri{
+        margin-top: 50px;
+    }
+    .cont1{
+        margin-top: 20px;
+        height: 200px;
+        font-size: 14px;
+    }
+}

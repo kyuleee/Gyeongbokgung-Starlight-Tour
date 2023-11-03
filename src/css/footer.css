@@ -18,10 +18,11 @@ footer{
 .tel p{
     margin-bottom: 15px;
     display: flex;
+    font-size: 16px;
 }
 .tel span{
-    display: block;
-    width: 100px;
+    /* width: 100px; */
+    width: 20%;
 }
 .sns{
     margin-top: 20px;
@@ -53,10 +54,9 @@ footer{
     font-size: 20px;
     margin-bottom: 35px;
     color: #fff;
-    /* transition: all 0.1s; */
 }
 .fnb>li:hover{
-transform: translateY(-5px);
+transform: translateY(-2px);
 }
 .fnb>li:active{
     color: #fff;
@@ -83,5 +83,7 @@ transform: translateY(-5px);
     }
     .tel p{
         margin-bottom: 10px;
+        font-size: 14px;
+
     }
 }

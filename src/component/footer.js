@@ -4,11 +4,11 @@ import youtube from '../img/icon_sns4.png';
 import insta from '../img/icon_sns3.png';
 
 const Footer = () => {
-        const locationSection = useLocation();
+    const locationSection = useLocation();
 
     const ClickGuide = ()=>{
         window.scrollTo({
-            top: `1490`,
+            top: `1390`,
             behavior: `smooth`
         })
     }

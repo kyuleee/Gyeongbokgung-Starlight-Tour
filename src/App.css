@@ -117,8 +117,61 @@ canvas{
   width: 1500px;
   margin: 0 auto;
 }
+.loadingScreen{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+.loadingImg{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 150px;
+  z-index: 999;
+}
+.loadingContent{
+  width: 500px;
+  height: 400px;
+  align-items: center;
+}
+.loadingText {
+  margin-top: 100px;
+  font-size: 80px;
+  font-weight: 700;
+  position: relative;
+  color: rgba(0,0,0,0.01);
+}
+.loadingText::before {
+  width: 100%;height: 130%;
+  content: 'Loading';
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  color: #fff;
+  animation: loadingSlide 2.5s steps(100) infinite;
+}
+@keyframes loadingSlide {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
 @media (max-width:1520px) {
   .w1500{
       width: 90%;
+  }
+}
+@media (max-width:480px) {
+  .loadingContent{
+    width: 100%;
+  }
+  .loadingText{
+    font-size: calc(100vw * (80 / 480));
   }
 }

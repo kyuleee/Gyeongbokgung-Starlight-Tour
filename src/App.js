@@ -1,27 +1,28 @@
 import "./App.css";
 import "./css/reset.css";
-import {Routes, Route} from 'react-router-dom'
-import { useState, useRef
- } from "react";
+import { Routes, Route } from 'react-router-dom'
+import { useState, useRef, useEffect} from "react";
+import LoadingImg from './img/mainText2.png'
 import Sky from './component/sky'
 import Top from "./component/top"
 import Header from "./component/header"
 import Footer from "./component/footer";
 import Main from "./component/main"
+
 //Pages
 import Section1_subPage from "./page/section1_subPage";
 import Section2_subPage from "./page/section2_subPage";
 import Section3_subPage from "./page/section3_subPage";
 import Section5_subPage from "./page/section5_subPage";
+import NotFound from './page/notFound';
 
 // community
-
 import NotiDetail from './page/notiDetail';
 import NotiList from './page/notiList';
 import NotiWrite from './page/notiWrite';
+
 // join
 import Login from "./joinPage/login";
-
 
 
 function App() {
@@ -43,8 +44,28 @@ function App() {
     const newlist=notiData.filter((data)=>data.notiId !== id);
     setNotiData(newlist);
   }
+  
+  const [LodingPage, setLodingPage] = useState(true);
+  useEffect(()=>{
+    setTimeout(()=>{
+      setLodingPage(false);
+    },2500)
+  })
   return(
-    <div>
+    <div className="loadingWrap">
+      {LodingPage ? (
+      <div>
+        <Sky>
+        </Sky>
+        <div className="loadingScreen">
+          <div className="loadingImg">
+            <img src={LoadingImg} className="loadingContent"></img>
+            <p className="loadingText">Loading</p>
+          </div>
+        </div>
+      </div>
+      ) : (
+        <div>
         <Sky />
         <Routes>
           <Route path="/" element={<><Top/><Header/><Main/></>}/>
@@ -54,12 +75,14 @@ function App() {
           <Route path="/NoticeList" element={<><Header/><NotiList notiData={notiData}/></>}/>
           <Route path="/NoticeList/:idx" element={<><Header/><NotiDetail notiData={notiData} notiRemove={notiRemove}/></>}/>
           <Route path="/NoticeWrite" element={<><Header/><NotiWrite notiCreate={notiCreate}/></>}/>
-          <Route path="/FAQ" element={<></>}/>
-          <Route path="/Gallery" element={<><Section5_subPage/></>}/>
-          <Route path="/Login" element={<Login/>}/>
-          <Route path="/Join" element={<></>}/>
+          <Route path="/FAQ" element={<><Header/></>}/>
+          <Route path="/Gallery" element={<><Header/><Section5_subPage/></>}/>
+          <Route path="/Login" element={<><Header/><Login/></>}/>
+          <Route path="/Join" element={<><Header/></>}/>
+          <Route path="*" element={<><Header/><NotFound/></>}/>
         </Routes>
         <Footer />
+        </div>)}
     </div>
   );
 } 

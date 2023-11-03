@@ -57,7 +57,7 @@ const Section5 = () => {
                                 <Link to="/Gallery"><li className="moveBox" style={{background: `url(${s.background})`,
                                 backgroundRepeat : 'no-repeat',
                                 backgroundSize:`cover`,
-                                backgroundPosition : `center`}} onMouseEnter={topOnStop} onMouseLeave={topOnRun} key={i}>
+                                backgroundPosition : `center`}} onMouseEnter={botOnStop} onMouseLeave={botOnRun} key={i}>
                             </li></Link>
                             ))}
                         </ul>
@@ -66,7 +66,7 @@ const Section5 = () => {
                                  <Link to="/Gallery"><li className="moveBox" style={{background: `url(${s.background})`,
                                  backgroundRepeat : 'no-repeat',
                                  backgroundSize:`cover`,
-                                 backgroundPosition : `center`}} onMouseEnter={topOnStop} onMouseLeave={topOnRun} key={i}>
+                                 backgroundPosition : `center`}} onMouseEnter={botOnStop} onMouseLeave={botOnRun} key={i}>
                              </li></Link>
                             ))}
                         </ul>

@@ -9,6 +9,7 @@ import event5 from '../img/event5.png';
 import subway from '../img/subway.png';
 import bus from '../img/bus.png';
 import { useEffect,useRef,useState,useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -65,7 +66,16 @@ const Section1_supPage = () => {
       kakaoMap();
       console.log(location);
     }, [location]);
-    
+
+    const kakaoMetroUrl = 'https://map.kakao.com/?target=subway&REGION=01'
+    const kakaoBusUrl = 'https://map.kakao.com/'
+    const MoveMetroMap = ()=>{
+        window.open(kakaoMetroUrl)
+    }
+    const MoveBusMap = ()=>{
+        window.open(kakaoBusUrl)
+    }
+
     return ( 
         <section className="section1_subPage">
             <div className="infoTit">
@@ -176,7 +186,7 @@ const Section1_supPage = () => {
                 <article className='pblcTrnsp'>
                     <h2>대중교통 안내</h2>
                     <ul>
-                        <li>
+                        <li onClick={MoveMetroMap}>
                             <div className='vehicle'>
                                 <img src={subway} />
                                 <span>지하철</span>
@@ -198,7 +208,7 @@ const Section1_supPage = () => {
                         </li>
                     </ul>
                     <ul>
-                        <li>
+                        <li onClick={MoveBusMap}>
                             <div className='vehicle'>
                                 <img src={bus} />
                                 <span>버스</span>

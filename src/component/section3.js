@@ -1,5 +1,4 @@
 import '../css/section3.css';
-import { Link, useLocation } from 'react-router-dom';
 import { useEffect, useRef, useState} from 'react';
 
 const Section3 = () => {
@@ -56,11 +55,12 @@ const Section3 = () => {
     "하루 2번 경복궁에서 왕가와 함께하는 특별한 산책이 펼쳐집니다. 왕과 왕비, 왕세자와 세자빈과 함께 걸으며 조선시대 궁궐의 일상을 즐겨보세요.",
     "조선왕조실록의 내용을 토대로 실제 임금이 드셨던 궁중병과와 궁중약차를 오늘날에도 즐길 수 있도록 구성된 체험 프로그램입니다.",
   ];
+  
+  //href로 페이지 이동
+  const MoveEventPage = ()=>{
+    window.location.href = '/Event'
+  }
 
-  // const EventHistory = useLocation()
-  // const MoveEventPage = () =>{
-  //   EventLocation.pathname === '/'
-  // }
   return (
     <section className="section3 w1500" ref={section3Ref} >
       <article className="sticky">
@@ -72,7 +72,7 @@ const Section3 = () => {
               className="event"
               style={{ transform: cardTransforms[idx - 1] }}
               ref={(cardRef) => (cardRefs.current[idx - 1] = cardRef)}
-              // onClick={MoveEventPage}
+              onClick={MoveEventPage}
             >
               <div className={`front front${idx}`}></div>
               <div className="back">{cardContents[idx - 1]}</div>
