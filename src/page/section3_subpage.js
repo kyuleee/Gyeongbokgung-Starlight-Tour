@@ -57,7 +57,7 @@ const Section3_subpage = () => {
                             <td className='sub3ContentRight'>행사문의 : 궁능활용프로그램 콜센터 1522-2295</td>
                         </tr>
                     </table>
-                    <a className="sub3MoreBtn">더보기</a>
+                    <a href='https://www.chf.or.kr/cont/view/fest/month/menu/210?thisPage=1&idx=109344&searchCategory1=600&searchCategory2=&searchField=all&searchDate=202310&weekSel=&searchText=' target='_blank' className="sub3MoreBtn">더보기</a>
                 </div>
             </article>
             <article className='sub3Content w1500'>
@@ -98,7 +98,7 @@ const Section3_subpage = () => {
                             <td className='sub3ContentRight'>행사문의 : 궁능활용프로그램 콜센터 1522-2295</td>
                         </tr>
                     </table>
-                    <a className="sub3MoreBtn">더보기</a>
+                    <a href='https://www.chf.or.kr/program/view/menu/527?viewType=date&idx=380' target='_blank' className="sub3MoreBtn">더보기</a>
                 </div>
             </article>
             <article className='sub3Content w1500'>
@@ -139,7 +139,7 @@ const Section3_subpage = () => {
                             <td className='sub3ContentRight'>행사문의 : 궁능활용프로그램 콜센터 1522-2295</td>
                         </tr>
                     </table>
-                    <a className="sub3MoreBtn">더보기</a>
+                    <a href='https://www.chf.or.kr/program/view/menu/527?viewType=date&idx=17' target='_blank' className="sub3MoreBtn">더보기</a>
                 </div>
             </article>
             <article className='sub3Content w1500'>
@@ -180,7 +180,7 @@ const Section3_subpage = () => {
                             <td className='sub3ContentRight'>행사문의 콜센터 : 1522-2295 | 티켓문의 : 티켓링크 고객센터 1588-7890</td>
                         </tr>
                     </table>
-                    <a className="sub3MoreBtn">더보기</a>
+                    <a href='https://www.chf.or.kr/program/view/menu/527?viewType=date&idx=324' target='_blank' className="sub3MoreBtn">더보기</a>
                 </div>
             </article>
         </section>

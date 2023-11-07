@@ -28,7 +28,7 @@ const Header  = () => {
     return (
       <header className="stickyHead">
         <div className='stickyWebNav'>
-          <Link to="/"><img alt='로고' className="headerLogo" src={imgUrl + 'img/Logo_white.png'}></img></Link>
+          <Link to="/festival"><img alt='로고' className="headerLogo" src={imgUrl + '/img/Logo_white.png'}></img></Link>
           <ul>
             <Link to="/Guide"><li>{t('header.menu1')}</li></Link>
             <Link to="/Program"><li>{t('header.menu2')}</li></Link>
@@ -37,7 +37,7 @@ const Header  = () => {
             <Link to="/Gallery"><li>{t('header.menu5')}</li></Link>
           </ul>
           <div className="headRight">
-            <Link to="/Login"><img alt='로그인 아이콘' className="loginIcon" src={imgUrl + `img/login.png`}></img></Link>
+            <Link to="/Login"><img alt='로그인 아이콘' className="loginIcon" src={imgUrl + '/img/login.png'}></img></Link>
             <button onClick={changelanguageToKo}>Korean</button>
             <button onClick={changelanguageToEn}>English</button>  
             {/* <button onClick={() => onChangeLang()}>언어변경</button> */}

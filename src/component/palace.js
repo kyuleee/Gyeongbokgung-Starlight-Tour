@@ -8,6 +8,53 @@ const Palace = () => {
     const main = useRef()
     useEffect(() => {  
         const mainCur = main.current
+
+// 터치 스크롤 이벤트 활성화
+mainCur.addEventListener('touchstart', handleTouchStart, false);
+mainCur.addEventListener('touchmove', handleTouchMove, false);
+
+// 이후 이벤트 핸들러 함수를 정의
+let xDown = null;
+let yDown = null;
+
+function handleTouchStart(event) {
+  const firstTouch = event.touches[0];
+  xDown = firstTouch.clientX;
+  yDown = firstTouch.clientY;
+}
+
+function handleTouchMove(event) {
+  if (!xDown || !yDown) {
+    return;
+  }
+
+  const xUp = event.touches[0].clientX;
+  const yUp = event.touches[0].clientY;
+
+  const xDiff = xDown - xUp;
+  const yDiff = yDown - yUp;
+
+  if (Math.abs(xDiff) > Math.abs(yDiff)) {
+    if (xDiff > 0) {
+      /* 화면 왼쪽으로 스와이프 */
+    } else {
+      /* 화면 오른쪽으로 스와이프 */
+    }
+  } else {
+    if (yDiff > 0) {
+      /* 화면 위로 스와이프 - 페이지 스크롤 가능 */
+    } else {
+      /* 화면 아래로 스와이프 - 페이지 스크롤 가능 */
+    }
+  }
+
+  // 리셋
+  xDown = null;
+  yDown = null;
+}
+
+
+
     //render
     const renderer = new THREE.WebGLRenderer({
         antialias: true,
@@ -129,7 +176,12 @@ const Palace = () => {
         renderer.setSize(mainCur.clientWidth, mainCur.clientHeight);
         renderer.render(scene,camera);
     });
+    return () => {
+        mainCur.removeEventListener('touchstart', handleTouchStart);
+        mainCur.removeEventListener('touchmove', handleTouchMove);
+      };
  })
+ 
     return ( 
         <div className='palace' ref={main}></div>
      );

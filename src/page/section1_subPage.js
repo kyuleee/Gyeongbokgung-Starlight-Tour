@@ -66,7 +66,28 @@ const Section1_supPage = () => {
       kakaoMap();
       console.log(location);
     }, [location]);
-
+    //이벤트 링크
+    const EventLink1 = 'https://www.chf.or.kr/cont/view/fest/month/menu/210?thisPage=1&idx=109344&searchCategory1=600&searchCategory2=&searchField=all&searchDate=202310&weekSel=&searchText='
+    const EventLink2 ='https://www.chf.or.kr/program/view/menu/527?viewType=date&idx=380'
+    const EventLink3 = 'https://www.chf.or.kr/program/view/menu/527?viewType=date&idx=17'
+    const EventLink4 = 'https://www.chf.or.kr/program/view/menu/527?viewType=date&idx=324'
+    const EventLink5 = 'https://www.chf.or.kr/program/view/menu/527?viewType=date&idx=257'
+    const moveEventLink1 = ()=>{
+        window.open(EventLink1)
+    }
+    const moveEventLink2 = ()=>{
+        window.open(EventLink2)
+    }
+    const moveEventLink3 = ()=>{
+        window.open(EventLink3)
+    }
+    const moveEventLink4 = ()=>{
+        window.open(EventLink4)
+    }
+    const moveEventLink5 = ()=>{
+        window.open(EventLink5)
+    }
+    //지도 링크
     const kakaoMetroUrl = 'https://map.kakao.com/?target=subway&REGION=01'
     const kakaoBusUrl = 'https://map.kakao.com/'
     const MoveMetroMap = ()=>{
@@ -137,7 +158,7 @@ const Section1_supPage = () => {
                     <div className='table'>
                         <ul>
                             <li >
-                                <img src={event1} data-aos="fade-left" data-aos-duration="1500"/>
+                                <img onClick={moveEventLink1} src={event1} data-aos="fade-left" data-aos-duration="1500"/>
                                 <div className='eventTxtBox'>
                                     <p>[2023 가을 궁중문화축전] 아티스트가 사랑한 궁</p>
                                     <p>경복궁 집옥재</p>
@@ -145,7 +166,7 @@ const Section1_supPage = () => {
                                 </div>
                             </li>
                             <li >
-                                <img src={event2} data-aos="fade-right"/>
+                                <img  onClick={moveEventLink2} src={event2} data-aos="fade-right"/>
                                 <div className='eventTxtBox'>
                                     <p>[2023 가을 궁중문화축전] 판소리로 듣는 궁 이야기</p>
                                     <p>경복궁 흥복전</p>
@@ -153,7 +174,7 @@ const Section1_supPage = () => {
                                 </div>
                             </li>
                             <li >
-                                <img src={event3} data-aos="fade-left"/>
+                                <img  onClick={moveEventLink3} src={event3} data-aos="fade-left"/>
                                 <div className='eventTxtBox'>
                                     <p>궁궐일상모습 재현 및 체험-왕가의 산책</p>
                                     <p>경복궁 일원</p>
@@ -161,7 +182,7 @@ const Section1_supPage = () => {
                                 </div>
                             </li>
                             <li >
-                                <img src={event4} data-aos="fade-right"/>
+                                <img  onClick={moveEventLink4} src={event4} data-aos="fade-right"/>
                                 <div className='eventTxtBox'>
                                     <p>2023년 경복궁 생과방(하반기)</p>
                                     <p>경복궁 생과방</p>
@@ -169,7 +190,7 @@ const Section1_supPage = () => {
                                 </div>
                             </li>
                             <li>
-                                <img src={event5}  data-aos="fade-left"/>
+                                <img  onClick={moveEventLink5} src={event5}  data-aos="fade-left"/>
                                 <div className='eventTxtBox'>
                                     <p>2023 경복궁 별빛야행(하반기)</p>
                                     <p>경복궁</p>
