@@ -1,0 +1,181 @@
+.section4_subPage{
+   overflow: hidden;
+}
+
+.Section4_announcement2{
+    width: 100%;
+    padding: 0px 0px 300px 0px;
+    
+ }
+ .w1500{
+     width: 1500px;
+     margin: 0 auto;
+ }
+ p{
+     padding: 5px;
+     font-size: 18px;
+ }
+ .section4SubHeader{
+     position: relative;
+     padding: 100px 0px 50px 0px;
+     margin: 0 auto;
+     text-align: center;
+     
+  }
+  .section4SubHeader::after{
+   position: absolute;
+   width: 150%;
+   bottom: 0;
+   left: -200px;
+   content: "";
+   border-bottom: 1px solid #888;
+}
+  .section4SubHeader>img{
+     width: 300px;
+     height: 200px;
+     background-size:cover;
+  }
+  .section4SubHeader>h2{
+     margin-top: 50px;
+     font-size: 40px; 
+     text-align: center;
+  }
+  .Section4_announcementBtns{
+    position: relative;
+    width: 425px;
+    height: 65px;
+    margin: 0 auto;
+    margin-top: 150px;
+    border-radius: 50px;
+    border: 2px solid white;
+
+  }
+ .Section4_announcementBtns > ul{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+ }
+ .Section4_announcementBtns > ul li{
+    width: 140px;
+    height: 61px;
+    font-size: 18px;
+    padding: 20px 30px;
+    cursor: pointer;
+ }
+
+ .on{
+   border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+ }
+ .faqArticle{
+    padding: 80px 0px 90px 0px;
+    font-size: 20px;
+ }
+ .faqTitle{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    text-align: center;
+    padding: 20px 0px;
+ }
+
+ .iconQ{
+    margin: 0px 35px;
+    width: 30px;
+    height: 30px;
+ }
+ .iconA{
+    margin: 0px 35px;
+    width: 30px;
+    height: 30px;
+ }
+ .iconQ>img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+ }
+ .iconA>img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+ }
+ .panel{
+    display: flex;
+    height: 0px;
+    max-height: 220px;
+    overflow: hidden;
+    transition: 1s ease-out;
+    
+ }
+ .panel.active{
+    width: 100%;
+    max-height:100px;
+    margin-top: 20px;
+    animation: on 1.5s ease-out;
+    animation-fill-mode: forwards;
+    border-bottom: 1px solid white;
+ }
+ .accordion{
+    position: relative;
+    display: flex;
+    padding: 20px 0px;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+
+ }
+ .accordion::before{
+    position: absolute;
+    content: '';
+    top:30%;
+    width: 20px;
+    height: 20px;
+    right: 30px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+    border-left: 3px solid  rgba(255, 255, 255, 0.5);
+    transform: rotate(-45deg);
+   
+ }
+ .accordion.active::before{
+    position: absolute;
+    content: '';
+    top:30%;
+    width: 20px;
+    height: 20px;
+    right: 30px;
+    opacity: 0;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+    border-left: 3px solid  rgba(255, 255, 255, 0.5);
+
+ }
+ .accordion.active::after{
+    position: absolute;
+    content: '';
+    top:40%;
+    width: 20px;
+    height: 20px;
+    right: 30px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+    border-left: 3px solid  rgba(255, 255, 255, 0.5);
+    animation: rote 1s ease-out;
+    animation-fill-mode: forwards;
+ }
+ .accordion:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+ }
+ @keyframes rote {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(135deg);
+    }
+}
+@keyframes on {
+    0%{
+        height: 0px;
+        opacity: 0;
+    }
+    100%{
+        height:130px;
+        opacity: 1;  
+    }
+}

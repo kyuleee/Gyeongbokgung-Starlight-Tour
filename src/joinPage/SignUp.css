@@ -1,0 +1,222 @@
+.SignUp{
+  width: 100%;
+  padding: 0px 0px 300px 0px;
+  font-size: 20px;
+}
+.w1500{
+   width: 1500px;
+   margin: 0 auto;
+  
+}
+.p{
+   padding: 5px;
+   font-size: 18px;
+}
+.SignUpHeader{
+  position: relative;
+   padding: 100px 0px 50px 0px;
+   margin: 0 auto;
+   text-align: center;
+}
+.SignUpHeader::after{
+  position: absolute;
+  width: 200%;
+  top: 450px;
+  left: -200px;
+  content: "";
+  border-bottom: 1px solid #888;
+}
+
+.SignUpHeader>img{
+   width: 300px;
+   height: 200px;
+   background-size:cover;
+}
+.SignUpHeader>h2{
+   margin-top: 50px;
+   font-size: 40px; 
+   text-align: center;
+}
+.titBox2{
+  padding: 200px 0px 30px;
+  border-bottom: 1px solid white;
+  font-size: 40px;
+  font-weight: normal;
+  text-align: left;
+}
+.SignUpMain{
+  display: flex;
+  padding: 60px 0px 100px 0px;
+}
+.input{
+  background: none;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid white;
+  font-size: 20px;
+  width: 275px;
+  height: 43px;
+  margin-right: 10px;
+  transform: translateY(-2px);
+}
+.button{
+  display: inline-block;
+  padding: 7px 24px;
+  background: none;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid white;
+  font-size: 20px;
+  cursor: pointer;
+}
+.button:hover{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+label{
+  display: block;
+  padding: 30px 0px 30px 40px;
+}
+label:nth-of-type(1){
+  padding-top: 10px;
+}
+label:nth-of-type(2){
+  padding-bottom: 60px;
+}
+label:nth-of-type(3){
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+label:nth-of-type(4){
+  padding-top: 10px;
+  padding-bottom: 25px;
+}
+label:nth-of-type(5){
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+label:nth-of-type(6){
+  padding-top: 30px;
+  padding-bottom: 25px;
+}
+label:nth-of-type(7){
+  padding-top: 30px;
+  padding-bottom: 25px;
+}
+label:nth-of-type(8){
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+label:nth-of-type(9){
+  padding-top: 12px;
+  padding-bottom: 10px;
+}
+label:nth-of-type(10){
+  padding-top: 12px;
+  padding-bottom: 25px;
+}
+
+
+
+
+.labelBox{
+  width: 250px;
+  flex-direction: column;
+}
+.inputBox{
+  margin-left: 130px;
+  
+}
+.input::placeholder{
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+}
+.inputDiv{
+  margin-bottom: 30px;
+
+}
+.redTxt{
+  margin-top: 12px;
+  font-size: 13px;
+  color: #FF143C;
+}
+input[type='radio'] {
+  appearance: none;
+  background-color: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  opacity: 30%;
+  margin: 10px;
+  vertical-align: middle;  
+  border: 2px solid white;
+  &:checked {
+    background-color: white;
+    opacity: 1;
+  }
+}
+.selectDiv{
+  margin-left: 30px;
+}
+.select{
+  background: none;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid white;
+  font-size: 20px;
+  padding: 5px;
+  width: 130px;
+  height: 43px;
+  margin-right: 10px;
+}
+.telInput{
+  width: 130px;
+  height: 43px;
+  margin-right: 10px;
+  padding: 5px;
+  transform: translateY(0px);
+}
+.mailInput{
+  width: 130px;
+  height: 43px;
+  margin-right: 10px;
+  padding: 5px;
+  transform: translateY(0px);
+}
+.mailInput:first-of-type{
+  margin-right: 0px;
+}
+.middle{
+  padding:10px;
+  vertical-align: middle;
+}
+.eMail{
+  margin-top: 31px;
+}
+input[type='checkbox'] {
+  appearance: none;
+  background-color:none;
+  width: 22px;
+  height: 22px;
+  opacity: 30%;
+  margin: 10px;
+  vertical-align: middle;  
+  border: 2px solid white;
+    &:checked {
+      background-color: white;
+      opacity: 1;
+    }
+}
+
+.check{
+margin-bottom: 20px;
+}
+.SignUpBtn{
+text-align:center;
+
+}
+.SignUpBtn>button{
+width: 220px;
+height: 62px;
+font-size: 18px;
+}

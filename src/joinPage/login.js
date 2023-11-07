@@ -1,5 +1,6 @@
 import './login.css';
 import topImg from '../img/headerImg.png';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     return ( 
@@ -31,7 +32,7 @@ const Login = () => {
                             </div>
                             <div className='btnWrap'>
                                 <div><input type='submit' value='로그인'></input></div>
-                                <div><input type='button' value='회원가입'></input></div>
+                               <Link to="/Join"><div><input type='button' value='회원가입'></input></div></Link> 
                             </div>
                         </form>
                     </div>

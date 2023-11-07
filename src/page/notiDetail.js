@@ -1,5 +1,6 @@
 import { useParams,Link, useNavigate } from "react-router-dom";
 import topImg from '../img/headerImg.png';
+import '../pageCss/notiDetail.css'
 
 const NotiDetail = ({notiData, notiRemove}) => {
     const {idx} = useParams();
@@ -9,7 +10,13 @@ const NotiDetail = ({notiData, notiRemove}) => {
         notiRemove(notiData[idx].notiId);
         navigate('/NoticeList');
     }
-
+    const formatDate = (date) => {
+        return new Date(date).toLocaleDateString().replace(/\./g, '').replace(/\s/g, '-');
+    };
+    const goBack = ()=>{
+        navigate(-1);
+    }
+   
     return ( 
         <section className="notiDetail">
             <div className="infoTit">
@@ -30,21 +37,18 @@ const NotiDetail = ({notiData, notiRemove}) => {
                     <div className="headerClear">
                         <p>{notiData[idx].title}</p>
                         <div>
-                            <p></p>
-                            <p></p>
+                            <span>{notiData[idx].userName}</span>
+                            <span>{formatDate(notiData[idx].createDate)}</span>
                         </div>
                     </div>
-                    <p>id  {notiData[idx].notiId}</p>
-                    {/* <p>제목  {notiData[idx].title}</p> */}
-                    <p>내용  {notiData[idx].content}</p>
-                    <p>작성자  {notiData[idx].userName}</p>
-                    <p>등록일  {notiData[idx].createDate}</p>
+                    <div className="notiContent">
+                        <p>{notiData[idx].content}</p>
+                    </div>
                 </div>
-
-
-                <div>
+                <div className="btnArea">
                     <button onClick={delFunc}>삭제</button>
-                    <Link to='/NoticeList'><button>목록</button></Link>
+                    {/* <Link to='/NoticeList'><button>목록</button></Link> */}
+                    <button onClick={goBack}>목록</button>
                 </div>
             </article>
         </section>

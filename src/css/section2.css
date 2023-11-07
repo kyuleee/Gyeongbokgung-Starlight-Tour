@@ -56,7 +56,7 @@
   line-height: 60px;
   overflow: hidden;
   cursor: pointer;
-  z-index: 9999;
+  z-index: 999;
 }
 .programMoreBtn:after {
   position: absolute;
@@ -67,15 +67,13 @@
   height: 100px;
   background: rgba(255, 255, 255, 1);
   transform: rotate(30deg);
-  transition: 1000ms;
+  transition: 500ms;
   opacity: 0;
 }
-
 .programMoreBtn:hover:after {
   left: calc(100% + 50px);
   opacity: 1;
 }
-
 .programImgbox {
   width: 100%;
 }

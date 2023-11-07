@@ -1,0 +1,31 @@
+{
+    "header":{
+        "menu1":"Gyeongbokgung Starlight Tour",
+        "menu2":"Programs",
+        "menu3":"Event",
+        "menu4":"Community",
+        "menu5":"Gallery"
+    },
+    "sec1":{
+        "title":"Gyeongbokgung Starlight Tour",
+        "cnt1":"The door to the deepest part of Gyeongbokgung Palace opens",
+        "cnt2":"Enjoy royal food experience and traditional performances in the Oeso kitchen",
+        "cnt3":"Go on a starlight walk with a professional commentator",
+        "box1_1":"2023 Gyeongbokgung Starlight Tour",
+        "box2_1":"From Sep. 08, 2023 to Nov. 13, 2023",
+        "box3_1":"Gyeongbokgung Palace, Sojubang, and the northern palace area",
+        "box5_1":"Starlight Walk, Doseok Surasang, Food Composition"
+    },
+    "btn":"VIEWMORE",
+    "sec2":{
+        "title":"Gyeongbokgung Program",
+        "box1":"Royal cuisine Experience",
+        "box1_1":"You will stop by the palace's kitchen, 'Sojubang', and taste the 12 dishes that the king of Joseon ate",
+        "box2":"Korean traditional music performance",
+        "box2_1":"While eating the delicious surasang, the Korean traditional music performance will be held together and it will be good night",
+        "box3":"Night commentary tour",
+        "box3_1":"You can tour the northern part of Gyeongbokgung Palace and enjoy the restored Hyangwonjeong Pavilion in a tranquil atmosphere",
+        "box4":"Free viewing of Hanbok",
+        "box4_1":"Both traditional Korean clothes and daily hanboks are free to watch. Top (jacket) and bottom (skirt, pants) are standard"
+    }
+}

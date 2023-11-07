@@ -14,7 +14,9 @@ import Section1_subPage from "./page/section1_subPage";
 import Section2_subPage from "./page/section2_subPage";
 import Section3_subPage from "./page/section3_subPage";
 import Section5_subPage from "./page/section5_subPage";
+import Section_FAQ from './page/section4_FAQ'
 import NotFound from './page/notFound';
+
 
 // community
 import NotiDetail from './page/notiDetail';
@@ -23,6 +25,7 @@ import NotiWrite from './page/notiWrite';
 
 // join
 import Login from "./joinPage/login";
+import SignUp from './joinPage/SignUp';
 
 
 function App() {
@@ -75,10 +78,10 @@ function App() {
           <Route path="/NoticeList" element={<><Header/><NotiList notiData={notiData}/></>}/>
           <Route path="/NoticeList/:idx" element={<><Header/><NotiDetail notiData={notiData} notiRemove={notiRemove}/></>}/>
           <Route path="/NoticeWrite" element={<><Header/><NotiWrite notiCreate={notiCreate}/></>}/>
-          <Route path="/FAQ" element={<><Header/></>}/>
+          <Route path="/FAQ" element={<><Header/><Section_FAQ/></>}/>
           <Route path="/Gallery" element={<><Header/><Section5_subPage/></>}/>
           <Route path="/Login" element={<><Header/><Login/></>}/>
-          <Route path="/Join" element={<><Header/></>}/>
+          <Route path="/Join" element={<><Header/><SignUp/></>}/>
           <Route path="*" element={<><Header/><NotFound/></>}/>
         </Routes>
         <Footer />
