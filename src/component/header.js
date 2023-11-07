@@ -22,7 +22,7 @@ const Header  = () => {
   const { t } = useTranslation();
   const changelanguageToKo = () => i18n.changeLanguage('ko')
   const changelanguageToEn = () => i18n.changeLanguage('en')
-  
+
 
 
     return (
@@ -38,8 +38,8 @@ const Header  = () => {
           </ul>
           <div className="headRight">
             <Link to="/Login"><img alt='로그인 아이콘' className="loginIcon" src={imgUrl + `img/login.png`}></img></Link>
-            <button className={`ChangeKorean ${hamMenuOpen}`} onClick={changelanguageToKo}>Korean</button>
-            <button className={`ChangeEnglish ${hamMenuOpen}`} onClick={changelanguageToEn}>English</button>  
+            <button onClick={changelanguageToKo}>Korean</button>
+            <button onClick={changelanguageToEn}>English</button>  
             {/* <button onClick={() => onChangeLang()}>언어변경</button> */}
             <div className='hamMenu' onClick={clickHamMenu}>
               <div className={`topHamMenu ${hamMenuOpen ? "openTopHam" : ""}`}></div>

@@ -4,22 +4,7 @@ import topImg from '../img/headerImg.png';
 import '../pageCss/notiList.css';
 
 const NotiList = ({notiData}) => {
-    const [count,setCount] = useState(10);
-    const btn = useRef();
-    // const moreBtn = ()=>{
-    //     if(count < notiData.length){
-    //         setCount(count + 10)
-    //     }else{
-    //         // console.log(btn.current)
-    //         // btn.current.style.display='none';
-    //         btn.current.style.setProperty('display','none');
-    //         btn.current.style.backgroundColor='red';
-    //         // btn.current.style.color='white';
-    //     }
-    // }
-    
-    
-   
+
     return ( 
         <section className="notiList">
             <div className="infoTit">
@@ -87,5 +72,5 @@ const NotiList = ({notiData}) => {
 NotiList.defaultProps = {
     notiData:[]
 }
- 
+
 export default NotiList;
