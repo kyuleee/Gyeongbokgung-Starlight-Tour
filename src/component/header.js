@@ -1,10 +1,11 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import '../css/header.css'
 import i18n from '../lang/i18n';
 import { withTranslation,useTranslation } from 'react-i18next';
 
 const Header  = () => {
+  const locationSection = useLocation();
   //public에 있는 이미지 가져 올 수 있는 함수
   const imgUrl = process.env.PUBLIC_URL
   //메뉴바 토글
@@ -17,6 +18,7 @@ const Header  = () => {
   }
   // Link 눌렀을 때 다른페이지에서 Top 0 시작
   useEffect(()=>{
+    locationSection.pathname !== '/festival' &&
     window.scrollTo(0,0)
   })
   const { t } = useTranslation();

@@ -90,6 +90,12 @@
   top: -12px;
   rotate: -45deg;
 }
+@media (max-width:6000px){
+  /*헤더 메뉴 안 뜨게 만들기*/
+  .openHam{
+    display: none;
+  }
+}
 @media (max-width:1500px) { 
   .stickyWebNav li{
     font-size: calc(100vw * (18 / 1500));
