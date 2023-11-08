@@ -1,10 +1,11 @@
 import '../css/section3.css';
 import { useEffect, useRef, useState} from 'react';
-
+import { withTranslation,useTranslation } from 'react-i18next';
 const Section3 = () => {
   const section3Ref = useRef();
   const cardRefs = useRef([]);
   const [cardTransforms, setCardTransforms] = useState([]);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const wrapper = section3Ref.current;
@@ -49,12 +50,12 @@ const Section3 = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  const cardContents = [
-    "'아티스트가 사랑한 궁'은 아티스트와 함께 궁궐의 아름다움을 전하는 초청공연입니다. 가을밤, 특별한 선율이 흐르는 경복궁 집옥재로 여러분을 초대합니다.",
-    "판소리로 듣는 궁 이야기'는 세워지고 무너지고, 세워지고 무너지기를 반복하는 궁의 끈질긴 생명력과 그것을 기억하는 이들에 대한 이야기를 담은 창작 판소리 공연입니다.",
-    "하루 2번 경복궁에서 왕가와 함께하는 특별한 산책이 펼쳐집니다. 왕과 왕비, 왕세자와 세자빈과 함께 걸으며 조선시대 궁궐의 일상을 즐겨보세요.",
-    "조선왕조실록의 내용을 토대로 실제 임금이 드셨던 궁중병과와 궁중약차를 오늘날에도 즐길 수 있도록 구성된 체험 프로그램입니다.",
-  ];
+  // const cardContents = [
+  //   `{t('sec3.box1)}.`,
+  //   "판소리로 듣는 궁 이야기'는 세워지고 무너지고, 세워지고 무너지기를 반복하는 궁의 끈질긴 생명력과 그것을 기억하는 이들에 대한 이야기를 담은 창작 판소리 공연입니다.",
+  //   "하루 2번 경복궁에서 왕가와 함께하는 특별한 산책이 펼쳐집니다. 왕과 왕비, 왕세자와 세자빈과 함께 걸으며 조선시대 궁궐의 일상을 즐겨보세요.",
+  //   "조선왕조실록의 내용을 토대로 실제 임금이 드셨던 궁중병과와 궁중약차를 오늘날에도 즐길 수 있도록 구성된 체험 프로그램입니다.",
+  // ];
   
   //href로 페이지 이동
   const MoveEventPage = ()=>{
@@ -64,9 +65,9 @@ const Section3 = () => {
   return (
     <section className="section3 w1500" ref={section3Ref} >
       <article className="sticky">
-        <h1>경복궁 행사</h1>
+        <h1>{t('sec3.title')}</h1>
         <div className="eventWrap">
-        {[1, 2, 3, 4].map((idx) => (
+        {/* {[1, 2, 3, 4].map((idx) => (
             <div
               key={idx}
               className="event"
@@ -77,10 +78,26 @@ const Section3 = () => {
               <div className={`front front${idx}`}></div>
               <div className="back">{cardContents[idx - 1]}</div>
             </div>
-          ))}
+          ))} */}
+          <div className='event' onClick={MoveEventPage} key='0' style={{transform:cardTransforms[0]}} ref={(cardRef) => (cardRefs.current[0] = cardRef)}>
+              <div className={`front front1`}></div>
+              <div className="back">{t('sec3.box1')}</div>
+          </div>
+          <div className='event' onClick={MoveEventPage} key='1' style={{transform:cardTransforms[1]}} ref={(cardRef) => (cardRefs.current[1] = cardRef)}>
+              <div className={`front front2`}></div>
+              <div className="back">{t('sec3.box2')}</div>
+          </div>
+          <div className='event' onClick={MoveEventPage} key='2' style={{transform:cardTransforms[2]}} ref={(cardRef) => (cardRefs.current[2] = cardRef)}>
+              <div className={`front front3`}></div>
+              <div className="back">{t('sec3.box3')}</div>
+          </div>
+          <div className='event' onClick={MoveEventPage} key='3' style={{transform:cardTransforms[3]}} ref={(cardRef) => (cardRefs.current[3] = cardRef)}>
+              <div className={`front front4`}></div>
+              <div className="back">{t('sec3.box4')}</div>
+          </div>
         </div>
       </article>
     </section>
   );
 };
-export default Section3;
+export default withTranslation()(Section3);

@@ -1,33 +1,34 @@
 import '../css/section4.css'
 import {Link} from 'react-router-dom'
-
+import { withTranslation,useTranslation } from 'react-i18next';
 const Section4 = () => {
+  const { t } = useTranslation();
     return (  
         <section className='section4'>
             <div className="sec4Padding w1500 flex">
                 <article className="section4Aticle">
-                    <h1>경복궁 커뮤니티</h1>
-                    <Link to ="/NoticeList"><button className="programMoreBtn sec4MoreBtn">더보기</button></Link>
+                    <h1>{t('sec4.title')}</h1>
+                    <Link to ="/NoticeList"><button className="programMoreBtn sec4MoreBtn">{t('btn')}</button></Link>
                 </article>
                 <article className="section4Aticle">
                     <Link to ="/NoticeList"><div className="notice flex">
-                        <p className='noticeTXT'>경복궁에서 마주한 특별한 시간</p>
+                        <p className='noticeTXT'>{t('sec4.not1')}</p>
                         <p className='noticeDate'>2023.09</p>
                     </div></Link>
                     <Link to ="/NoticeList"><div className="notice flex">
-                        <p className='noticeTXT'>궁궐 일상모습 재현 및 체험</p>
+                        <p className='noticeTXT'>{t('sec4.not2')}</p>
                         <p className='noticeDate'>2023.09</p>
                     </div></Link>
                     <Link to ="/NoticeList"><div className="notice flex">
-                        <p className='noticeTXT'>아티스트가 사랑한 궁</p>
+                        <p className='noticeTXT'>{t('sec4.not3')}</p>
                         <p className='noticeDate'>2023.09</p>
                     </div></Link>
                     <Link to ="/NoticeList"><div className="notice flex">
-                        <p className='noticeTXT'>2023 수라간 시식공감</p>
+                        <p className='noticeTXT'>{t('sec4.not4')}</p>
                         <p className='noticeDate'>2023.09</p>
                     </div></Link>
                     <Link to ="/NoticeList"><div className="notice flex">
-                        <p className='noticeTXT'>판소리로 듣는 궁 이야기</p>
+                        <p className='noticeTXT'>{t('sec4.not5')}</p>
                         <p className='noticeDate'>2023.09</p>
                     </div></Link>  
                 </article>
@@ -36,4 +37,4 @@ const Section4 = () => {
     );
 }
  
-export default Section4;
+export default withTranslation()(Section4);

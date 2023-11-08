@@ -16,15 +16,17 @@ const Header  = () => {
   const closeHamMenu = ()=>{
     setHamMenuOpen(false)
   }
-  // Link 눌렀을 때 다른페이지에서 Top 0 시작
+  // Link 눌렀을 때 다른페이지에서 Top 0 시작 메인 페이지는 그대로 유지
   useEffect(()=>{
     locationSection.pathname !== '/festival' &&
     window.scrollTo(0,0)
   })
   const { t } = useTranslation();
-  const changelanguageToKo = () => i18n.changeLanguage('ko')
-  const changelanguageToEn = () => i18n.changeLanguage('en')
-
+  const onChangeLang = () => {
+    i18n.language === "ko"
+      ? i18n.changeLanguage("en")
+      : i18n.changeLanguage("ko");
+  };
 
 
     return (
@@ -39,10 +41,10 @@ const Header  = () => {
             <Link to="/Gallery"><li>{t('header.menu5')}</li></Link>
           </ul>
           <div className="headRight">
-            <Link to="/Login"><img alt='로그인 아이콘' className="loginIcon" src={imgUrl + '/img/login.png'}></img></Link>
-            <button onClick={changelanguageToKo}>Korean</button>
-            <button onClick={changelanguageToEn}>English</button>  
-            {/* <button onClick={() => onChangeLang()}>언어변경</button> */}
+            <Link to="/Login"><img alt='로그인 아이콘' className="loginIcon" src={imgUrl + `/img/login.png`}></img></Link>
+            
+            <button onClick={() => onChangeLang()}>{t('header.btn')}</button>
+           
             <div className='hamMenu' onClick={clickHamMenu}>
               <div className={`topHamMenu ${hamMenuOpen ? "openTopHam" : ""}`}></div>
               <div className={`centerHamMenu ${hamMenuOpen ? "openCenterHam" : ""}`}></div>
@@ -53,19 +55,19 @@ const Header  = () => {
         {/* 오른쪽에서 나오는 햄버거 메뉴임 */}
         <div className={`openHam ${hamMenuOpen ? "clickOpen" : ""}`}>
           <div>
-          <Link to="/Guide" onClick={closeHamMenu}><p>별빛야행 소개</p></Link>
+          <Link to="/Guide" onClick={closeHamMenu}><p>{t('header.menu1')}</p></Link>
           </div>
           <div>
-          <Link to="/Program" onClick={closeHamMenu}><p>메인 프로그램</p></Link>
+          <Link to="/Program" onClick={closeHamMenu}><p>{t('header.menu2')}</p></Link>
           </div>
           <div>
-          <Link to="/Event" onClick={closeHamMenu}><p>경복궁 행사</p></Link>
+          <Link to="/Event" onClick={closeHamMenu}><p>{t('header.menu3')}</p></Link>
           </div>
           <div>
-          <Link to="/Gallery" onClick={closeHamMenu}><p>갤러리</p></Link>
+          <Link to="/Gallery" onClick={closeHamMenu}><p>{t('header.menu4')}</p></Link>
           </div>
           <div>
-          <Link to="/NoticeList" onClick={closeHamMenu}><p>커뮤니티</p></Link>
+          <Link to="/NoticeList" onClick={closeHamMenu}><p>{t('header.menu5')}</p></Link>
           </div>
         </div>
       </header>

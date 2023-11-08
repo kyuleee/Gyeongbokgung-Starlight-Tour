@@ -6,8 +6,10 @@ import programImg2 from '../img/img2.jpg';
 import programImg3 from '../img/img3.jpg';
 import programImg4 from '../img/img4.jpg';
 import { useRef,useEffect,useState } from 'react';
-
+import i18n from '../lang/i18n';
+import { withTranslation,useTranslation } from 'react-i18next';
 const Section2 = () => {
+    const { t } = useTranslation();
 
     const [isSlideUp1, setSlideUp1] = useState(true);
     const [isSlideUp2, setSlideUp2] = useState(true);
@@ -66,8 +68,8 @@ const Section2 = () => {
             <div className="w1500"> 
                 <div className="stickyBox">
                     <div className="sticky2">
-                        <h1 className="programH1">경복궁 프로그램</h1>
-                        <Link to="/Program"><button className="programMoreBtn">더보기</button></Link>
+                        <h1 className="programH1">{t('sec2.title')}</h1>
+                        <Link to="/Program"><button className="programMoreBtn">{t('btn')}</button></Link>
                         <div className={`slideBox
                            ${isSlideUp1 ? 'slideBox' : 'up1'}
                            ${isSlideUp2 ? 'slideBox' : 'up2'}
@@ -79,8 +81,8 @@ const Section2 = () => {
                             <div className="slide slide1 flex">
                                 <article className="section2Aticle">
                                     <div>
-                                        <h2 className="programH2">궁중음식 체험</h2>       
-                                        <p>궁궐의 부엌인 ‘소주방’에 들러 조선의 왕이 먹던 일상식인 12첩 반상을 맛보게 됩니다.</p>
+                                        <h2 className="programH2">{t('sec2.box1')}</h2>       
+                                        <p>{t('sec2.box1_1')}.</p>
                                     </div>
                                 </article>
                                 <article className="section2Aticle">
@@ -92,8 +94,8 @@ const Section2 = () => {
                             <div  className="slide slide2 flex">
                                 <article className="section2Aticle">
                                     <div>
-                                        <h2 className="programH2">국악공연 관람</h2>       
-                                        <p>맛있는 수라상을 먹는 동안 국악공연이 함께 펼쳐져 맛과 멋의 풍류로 가득한 밤이 될 것입니다.</p>
+                                        <h2 className="programH2">{t('sec2.box2')}</h2>       
+                                        <p>{t('sec2.box2_1')}.</p>
                                     </div>
                                 </article>
                                 <article className="section2Aticle">
@@ -105,8 +107,8 @@ const Section2 = () => {
                             <div  className="slide slide3 flex">
                                 <article className="section2Aticle">
                                     <div>
-                                        <h2 className="programH2">야간해설탐방</h2>       
-                                        <p>경복궁 북측 권역을 탐방하며, 복원을 완료한 향원정을 고즈넉한 분위기에서 감상하실 수 있습니다.</p>
+                                        <h2 className="programH2">{t('sec2.box3')}</h2>       
+                                        <p>{t('sec2.box3_1')}.</p>
                                     </div>
                                 </article>
                                 <article className="section2Aticle">
@@ -118,8 +120,8 @@ const Section2 = () => {
                             <div  className="slide slide4 flex">
                                 <article className="section2Aticle">
                                     <div>
-                                        <h2 className="programH2">한복무료관람</h2>       
-                                        <p>전통한복, 생활한복  모두 무료관람 대상. 상의(저고리)와 하의(치마, 바지)를 기본으로  함.</p>
+                                        <h2 className="programH2">{t('sec2.box4')}</h2>       
+                                        <p>{t('sec2.box4_1')}.</p>
                                     </div>
                                 </article>
                                 <article className="section2Aticle">
@@ -136,25 +138,25 @@ const Section2 = () => {
                 <div className="rollingBanner">
                     <div className="banner">         
                         <img className="bannerArrow" src={bannerArrow}></img>
-                        <p className='bannerTxtWhite'>2023 경복궁 별빛야행 축제</p>
+                        <p className='bannerTxtWhite'>{t('sec2.bnr')}</p>
                         <img className="bannerArrow" src={bannerArrow}></img>
-                        <p className='bannerTxtBlack'>2023 경복궁 별빛야행 축제</p>
+                        <p className='bannerTxtBlack'>{t('sec2.bnr')}</p>
                         <img className="bannerArrow" src={bannerArrow}></img>
-                        <p className='bannerTxtWhite'>2023 경복궁 별빛야행 축제</p>
+                        <p className='bannerTxtWhite'>{t('sec2.bnr')}</p>
                         <img className="bannerArrow" src={bannerArrow}></img>
-                        <p className='bannerTxtBlack'>2023 경복궁 별빛야행 축제</p>
+                        <p className='bannerTxtBlack'>{t('sec2.bnr')}</p>
                     </div>
                 </div>
                 <div className="rollingBanner Clone">
                     <div className="banner">         
                         <img className="bannerArrow" src={bannerArrow}></img>
-                        <p className='bannerTxtWhite'>2023 경복궁 별빛야행 축제</p>
+                        <p className='bannerTxtWhite'>{t('sec2.bnr')}</p>
                         <img className="bannerArrow" src={bannerArrow}></img>
-                        <p className='bannerTxtBlack'>2023 경복궁 별빛야행 축제</p>
+                        <p className='bannerTxtBlack'>{t('sec2.bnr')}</p>
                         <img className="bannerArrow" src={bannerArrow}></img>
-                        <p className='bannerTxtWhite'>2023 경복궁 별빛야행 축제</p>
+                        <p className='bannerTxtWhite'>{t('sec2.bnr')}</p>
                         <img className="bannerArrow" src={bannerArrow}></img>
-                        <p className='bannerTxtBlack'>2023 경복궁 별빛야행 축제</p>
+                        <p className='bannerTxtBlack'>{t('sec2.bnr')}</p>
                     </div>
                 </div>
             </div>
@@ -163,4 +165,4 @@ const Section2 = () => {
      );
 }
  
-export default Section2;
+export default withTranslation()(Section2);

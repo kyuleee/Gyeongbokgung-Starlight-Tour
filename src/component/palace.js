@@ -92,6 +92,10 @@ const Palace = () => {
     controls.mouseButtons.RIGHT = null; //오른쪽 마우스 삭제
     controls.enablePan = false;
     controls.enableDamping = true;
+    const onTouchStart = (e) =>{
+        e.preventDefault()
+    }
+    renderer.domElement.addEventListener(`touchstart`, onTouchStart)
     // controls.enabled = false; //움직임 다 삭제
 
     //GLTF Loader

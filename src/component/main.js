@@ -5,6 +5,7 @@ import Section4 from './section4';
 import Section5 from './section5'
 import Palace from './palace';
 
+
 const Main = () => {
 
     return ( 

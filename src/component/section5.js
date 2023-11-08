@@ -1,9 +1,12 @@
 import { useState} from 'react';
 import { Link } from 'react-router-dom';
 import '../css/section5.css'
+import { withTranslation,useTranslation } from 'react-i18next';
 
 
 const Section5 = () => {
+    const { t } = useTranslation();
+
     //위에 슬라이드
     const [topMove, setTopMove] = useState(true);
     const topOnStop = () => setTopMove(false);
@@ -27,7 +30,7 @@ const Section5 = () => {
     return (  
         <section className='section5'>
             <article className='w1500'>
-                <h1 className='section5Title'>경복궁 갤러리</h1>
+                <h1 className='section5Title'>{t('sec5.title')}</h1>
             </article>
             <article className="slideWrapper">
                     <div className="moveWrapper">

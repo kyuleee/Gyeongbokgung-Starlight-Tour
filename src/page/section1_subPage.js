@@ -12,10 +12,15 @@ import { useEffect,useRef,useState,useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import i18n from '../lang/i18n';
+import { withTranslation,useTranslation } from 'react-i18next';
+
 
 
 const {kakao} = window;
 const Section1_supPage = () => {
+    const { t } = useTranslation();
+
     useEffect(() => {
         AOS.init();
       })
@@ -51,7 +56,7 @@ const Section1_supPage = () => {
       }
     }, [navigator.geolocation.getCurrentPosition]);
   
-    // 카카오지도 API 가져오기
+    // 카카오지도  API 가져오기
     const kakaoMap = () => {
       const container = document.getElementById("map");
       const options = {
@@ -66,28 +71,7 @@ const Section1_supPage = () => {
       kakaoMap();
       console.log(location);
     }, [location]);
-    //이벤트 링크
-    const EventLink1 = 'https://www.chf.or.kr/cont/view/fest/month/menu/210?thisPage=1&idx=109344&searchCategory1=600&searchCategory2=&searchField=all&searchDate=202310&weekSel=&searchText='
-    const EventLink2 ='https://www.chf.or.kr/program/view/menu/527?viewType=date&idx=380'
-    const EventLink3 = 'https://www.chf.or.kr/program/view/menu/527?viewType=date&idx=17'
-    const EventLink4 = 'https://www.chf.or.kr/program/view/menu/527?viewType=date&idx=324'
-    const EventLink5 = 'https://www.chf.or.kr/program/view/menu/527?viewType=date&idx=257'
-    const moveEventLink1 = ()=>{
-        window.open(EventLink1)
-    }
-    const moveEventLink2 = ()=>{
-        window.open(EventLink2)
-    }
-    const moveEventLink3 = ()=>{
-        window.open(EventLink3)
-    }
-    const moveEventLink4 = ()=>{
-        window.open(EventLink4)
-    }
-    const moveEventLink5 = ()=>{
-        window.open(EventLink5)
-    }
-    //지도 링크
+
     const kakaoMetroUrl = 'https://map.kakao.com/?target=subway&REGION=01'
     const kakaoBusUrl = 'https://map.kakao.com/'
     const MoveMetroMap = ()=>{
@@ -101,99 +85,101 @@ const Section1_supPage = () => {
         <section className="section1_subPage">
             <div className="infoTit">
                 <img src={topImg}></img>
-                <h3>별빛야행 소개</h3>
+                <h3>{t('sec1.main')}</h3>
             </div>
             <div className='w1500'>
                 <div className='slogan'>
                     <img src={slogan}/>
-                    <h3>2023 경복궁 별빛야행</h3>
-                    <p>서울의 밤을 더 뜨겁게 달궈 시민과 함께 만드는 문화매력도시 서울을 보여줄 <span>2023 경복궁 별빛야행</span></p>
-                    <p>모두가 함께 즐기는 서울의 대표 문화예술축제로 한걸음 더 다가갈 한달간의 여정에 여러분을 초대합니다.</p>
+                    <h3>{t('sub1.slg')}</h3>
+                    <p>{t('sub1.slg1')}</p>
+                    <p>{t('sub1.slg2')}.</p>
                 </div>
                 <article className='mainInfo'>
-                    <h2>경복궁<span>축제</span></h2>
+                    <h2>{t('sub1.tit')}<span>{t('sub1.tit1')}</span></h2>
                     <ul>
                         <li>
                             <b>
-                                <span>행</span>
-                                <span>사</span>
-                                <span>명</span>
+                            {i18n.language === "ko" ? 
+                            (<><span>행</span><span>사</span><span>명</span></>)
+                            :(<><span>Festival name</span></>)}
                             </b>
-                            <span>2023 경복궁 별빛야행</span>
+                            <span>{t('sec1.box1_1')}</span>
                         </li>
                         <li>
                             <b>
-                                <span>기</span>
-                                <span>간</span>
+                            {i18n.language === "ko" ? 
+                            (<><span>기</span><span>간</span></>)
+                            :(<><span>Period</span></>)}
                             </b>
-                            <span>2023.10.11(수) ~ 11.13</span>
+                            <span>{t('sec1.box2_1')}</span>
                         </li>
                         <li>
                             <b>
-                                <span>장</span>
-                                <span>소</span>
+                            {i18n.language === "ko" ? 
+                            (<><span>장</span><span>소</span></>)
+                            :(<><span>Venue</span></>)}
                             </b>
-                            <span>경복궁 내</span>
+                            <span>{t('sec1.box3_1')}</span>
                         </li>
                         <li>
                             <b>
-                                <span>주</span>
-                                <span>최</span>
+                            {i18n.language === "ko" ? 
+                            (<><span>행</span><span>사</span><span>문</span><span>의</span></>)
+                            :(<><span>Contact</span></>)}
                             </b>
-                            <span>문화재청 궁능유적본부 경복궁 관리소</span>
+                            <span>1522-2295</span>
                         </li>
                         <li>
                             <b>
-                                <span>프</span>
-                                <span>로</span>
-                                <span>그</span>
-                                <span>램</span>
+                            {i18n.language === "ko" ? 
+                            (<><span>프</span><span>로</span><span>그</span><span>램</span></>)
+                            :(<><span>Programs</span></>)}
                             </b>
-                            <span>궁중음식 체험, 국악공연 관람, 야간해설 탐방</span>
+                            <span>{t('sec1.box5_1')}</span>
                         </li>
                     </ul>
                 </article>
                 <article className='schedule'>
-                    <h2>축제 일정표</h2>
+                    <h2>{t('sub2.tit')}</h2>
                     <div className='table'>
                         <ul>
                             <li >
-                                <img onClick={moveEventLink1} src={event1} data-aos="fade-left" data-aos-duration="1500"/>
+                                <a href='https://www.chf.or.kr/cont/view/fest/month/menu/210?thisPage=1&idx=109344&searchCategory1=600&searchCategory2=617&searchField=all&searchDate=202310&weekSel=undefined&searchText=' target='_blank'><img src={event1} data-aos="fade-left" data-aos-duration="1000"></img></a>
                                 <div className='eventTxtBox'>
-                                    <p>[2023 가을 궁중문화축전] 아티스트가 사랑한 궁</p>
-                                    <p>경복궁 집옥재</p>
+                                    <p>{t('sub2.tit1')}</p>
+                                    <p>{t('sub2.add1')}</p>
                                     <p>2023-10-17 ~ 2023-10-18</p>
                                 </div>
                             </li>
                             <li >
-                                <img  onClick={moveEventLink2} src={event2} data-aos="fade-right"/>
+                                <a href='https://www.chf.or.kr/cont/view/fest/month/menu/210?thisPage=1&idx=109342&searchCategory1=600&searchCategory2=617&searchField=all&searchDate=202310&weekSel=undefined&searchText=' target='_blank'><img src={event2} data-aos="fade-right" data-aos-duration="1000"/></a>
                                 <div className='eventTxtBox'>
-                                    <p>[2023 가을 궁중문화축전] 판소리로 듣는 궁 이야기</p>
-                                    <p>경복궁 흥복전</p>
+                                    <p>{t('sub2.tit2')}</p>
+                                    <p>{t('sub2.add2')}</p>
                                     <p>2023-10-13 ~ 2023-10-14</p>
                                 </div>
                             </li>
                             <li >
-                                <img  onClick={moveEventLink3} src={event3} data-aos="fade-left"/>
+                                <a href='https://www.chf.or.kr/cont/view/fest/month/menu/210?thisPage=1&idx=109330&searchCategory1=600&searchCategory2=617&searchField=all&searchDate=202310&weekSel=undefined&searchText=' target='_blank'><img src={event3} data-aos="fade-left" data-aos-duration="1000"/></a>
                                 <div className='eventTxtBox'>
-                                    <p>궁궐일상모습 재현 및 체험-왕가의 산책</p>
-                                    <p>경복궁 일원</p>
+                                    <p>{t('sub2.tit3')}</p>
+                                    <p>{t('sub2.add3')}</p>
                                     <p>2023-10-08 ~ 2023-10-13</p>
                                 </div>
                             </li>
                             <li >
-                                <img  onClick={moveEventLink4} src={event4} data-aos="fade-right"/>
+                                <a href='https://www.chf.or.kr/cont/view/fest/month/menu/210?thisPage=2&idx=109270&searchCategory1=600&searchCategory2=617&searchField=all&searchDate=202310&weekSel=undefined&searchText=' target='_blank'><img src={event4} data-aos="fade-right" data-aos-duration="1000"/></a>
                                 <div className='eventTxtBox'>
-                                    <p>2023년 경복궁 생과방(하반기)</p>
-                                    <p>경복궁 생과방</p>
+                                    <p>{t('sub2.tit4')}</p>
+                                    <p>{t('sub2.add4')}</p>
                                     <p>2023-09-07 ~ 2023-10-21</p>
                                 </div>
                             </li>
                             <li>
-                                <img  onClick={moveEventLink5} src={event5}  data-aos="fade-left"/>
+                                <a href='https://www.chf.or.kr/cont/view/fest/month/menu/210?thisPage=2&idx=109253&searchCategory1=600&searchCategory2=617&searchField=all&searchDate=202310&weekSel=undefined&searchText=' target='_blank'><img src={event5}  data-aos="fade-left" data-aos-duration="1000"/></a>
                                 <div className='eventTxtBox'>
-                                    <p>2023 경복궁 별빛야행(하반기)</p>
-                                    <p>경복궁</p>
+                                    <p>{t('sub2.tit5')}</p>
+                                    <p>{t('sub2.add5')}</p>
                                     <p>2023-09-08 ~ 2023-10-08</p>
                                 </div>
                             </li>
@@ -201,29 +187,29 @@ const Section1_supPage = () => {
                     </div>
                 </article>
                 <article className='secMap'>
-                    <h2>오시는 길</h2>
+                    <h2>{t('sub3.map')}</h2>
                     <div id='map' style={{width:"100%", height:"400px"}}></div>
                 </article>
                 <article className='pblcTrnsp'>
-                    <h2>대중교통 안내</h2>
+                    <h2>{t('sub3.tit')}</h2>
                     <ul>
                         <li onClick={MoveMetroMap}>
                             <div className='vehicle'>
                                 <img src={subway} />
-                                <span>지하철</span>
+                                <span>{t('sub3.trnsp')}</span>
                             </div>
                             <ol>
                                 <li>
-                                    <b className='line3'>3호선</b>
-                                    <p>3호선 안국역 1번 출구 도보 13분</p>
+                                    <b className='line3'>{t('sub3.way1')}</b>
+                                    <p>{t('sub3.way1_1')}</p>
                                 </li>
                                 <li>
-                                    <b className='line5'>5호선</b>
-                                    <p>5호선 광화문역 2번 출구 도보 약 14분</p>
+                                    <b className='line5'>{t('sub3.way2')}</b>
+                                    <p>{t('sub3.way2_1')}</p>
                                 </li>
                                 <li>
-                                    <b className='line3'>3호선</b>
-                                    <p>3호선 경복궁역 4번 출구 도보 16분</p>
+                                    <b className='line3'>{t('sub3.way3')}</b>
+                                    <p>{t('sub3.way3_1')}</p>
                                 </li>
                             </ol>
                         </li>
@@ -232,12 +218,12 @@ const Section1_supPage = () => {
                         <li onClick={MoveBusMap}>
                             <div className='vehicle'>
                                 <img src={bus} />
-                                <span>버스</span>
+                                <span>{t('sub3.trnsp1')}</span>
                             </div>
                             <ol>
                                 <li>
-                                    <b className='villageBus'>마을</b>
-                                    <p>종로 11번 버스 법련사 정류장</p>
+                                    <b className='villageBus'>{t('sub3.b1')}</b>
+                                    <p>{t('sub3.b1_1')}</p>
                                 </li>
                             </ol>
                         </li>
@@ -248,4 +234,4 @@ const Section1_supPage = () => {
      );
 }
  
-export default Section1_supPage;
+export default withTranslation()(Section1_supPage);
