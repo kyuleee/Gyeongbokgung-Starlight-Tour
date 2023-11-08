@@ -32,7 +32,7 @@ const Login = () => {
                             </div>
                             <div className='btnWrap'>
                                 <div><input type='submit' value='로그인'></input></div>
-                               <Link to="/Join"><div><input type='button' value='회원가입'></input></div></Link> 
+                                <div><Link to="/Join"><input type='button' value='회원가입'></input></Link></div>
                             </div>
                         </form>
                     </div>
