@@ -89,14 +89,14 @@ const Palace = () => {
     //마우스로 움직에 할 수 있음
     const controls = new OrbitControls( camera, renderer.domElement );
     controls.enableZoom = false; //줌 삭제
+    // controls.enableRotate = false; 회전 삭제
     controls.mouseButtons.RIGHT = null; //오른쪽 마우스 삭제
-    controls.enablePan = false;
-    controls.enableDamping = true;
-    const onTouchStart = (e) =>{
-        e.preventDefault()
-    }
-    renderer.domElement.addEventListener(`touchstart`, onTouchStart)
     // controls.enabled = false; //움직임 다 삭제
+    if(isMobileDevice()){
+        mainCur.style.pointerEvents ='none';
+        controls.enabled = false;
+    }
+
 
     //GLTF Loader
     let mixer;
@@ -137,22 +137,11 @@ const Palace = () => {
         renderer.setSize(mainCur.clientWidth, mainCur.clientHeight);
         renderer.render(scene,camera);
     });
-    
-
-    mainCur.addEventListener('touchstart', (event) => {
-      const touches = event.touches || event.changedTouches;
-      if (touches.length === 1) {
-        controls.enableRotate = true;
-        controls.enableZoom = false;
-      }
-    });
-
-    mainCur.addEventListener('touchend', () => {
-      controls.enableRotate = true;
-      controls.enableZoom = false;
-    });
  },[])
- 
+    //모바일 버전
+    function isMobileDevice() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
     return ( 
         <div className='palace' ref={main}></div>
      );

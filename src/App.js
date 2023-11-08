@@ -71,7 +71,7 @@ function App() {
         <div>
         <Sky />
         <Routes>
-          <Route path="/festival" element={<><Top/><Header/><Main/></>}/>
+          <Route path="/festival/" element={<><Top/><Header/><Main/></>}/>
           <Route path="/Guide" element={<><Header/><Section1_subPage/></>}/>
           <Route path="/Program" element={<><Header/><Section2_subPage/></>}/>
           <Route path="/Event" element={<><Header/><Section3_subPage/></>}/>

@@ -43,7 +43,7 @@ const Footer = () => {
     return ( 
         <footer className='w1500'>
             <div className='footerLeft'>
-                <Link to="/festival"><div className='logo'><img src={process.env.PUBLIC_URL + '/img/Logo_white.png'}/></div></Link>
+                <Link to="/festival/"><div className='logo'><img src={process.env.PUBLIC_URL + '/img/Logo_white.png'}/></div></Link>
                 <div className="tel">
                     <p><span>{t('footer.addr')}</span>{t('footer.addr_cnt')}</p>
                     <p><span>{t('footer.tel')}</span>(02) 566-6300 </p>
@@ -55,7 +55,7 @@ const Footer = () => {
                 <p className="copy">Copyright(c) 2023 Gyeongbokgung Night Trip. All right reserved</p>
             </div>
             <ul className='fnb'>
-                {locationSectionFooter.pathname === '/festival' && (
+                {locationSectionFooter.pathname == '/festival/' && (
                 <>
                 <li onClick={ClickGuide}>{t('footer.sec1')}</li>
                 <li onClick={ClickProgram}>{t('footer.sec2')}</li>

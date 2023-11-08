@@ -18,7 +18,7 @@ const Header  = () => {
   }
   // Link 눌렀을 때 다른페이지에서 Top 0 시작 메인 페이지는 그대로 유지
   useEffect(()=>{
-    locationSection.pathname !== '/festival' &&
+    locationSection.pathname !== '/festival/' &&
     window.scrollTo(0,0)
   })
   const { t } = useTranslation();
@@ -32,7 +32,7 @@ const Header  = () => {
     return (
       <header className="stickyHead">
         <div className='stickyWebNav'>
-          <Link to="/festival"><img alt='로고' className="headerLogo" src={imgUrl + '/img/Logo_white.png'}></img></Link>
+          <Link to="/festival/"><img alt='로고' className="headerLogo" src={imgUrl + '/img/Logo_white.png'}></img></Link>
           <ul>
             <Link to="/Guide"><li>{t('header.menu1')}</li></Link>
             <Link to="/Program"><li>{t('header.menu2')}</li></Link>
@@ -64,10 +64,10 @@ const Header  = () => {
           <Link to="/Event" onClick={closeHamMenu}><p>{t('header.menu3')}</p></Link>
           </div>
           <div>
-          <Link to="/Gallery" onClick={closeHamMenu}><p>{t('header.menu4')}</p></Link>
+          <Link to="/NoticeList" onClick={closeHamMenu}><p>{t('header.menu4')}</p></Link>
           </div>
           <div>
-          <Link to="/NoticeList" onClick={closeHamMenu}><p>{t('header.menu5')}</p></Link>
+          <Link to="/Gallery" onClick={closeHamMenu}><p>{t('header.menu5')}</p></Link>
           </div>
         </div>
       </header>
