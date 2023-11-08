@@ -1,5 +1,5 @@
 import '../pageCss/section3_subpage.css'
-import HeaderImg from '../img/headerImg.png'
+import headerImg from '../img/headerImg.png'
 import Sub3Event1 from '../img/event1.jpg'
 import Sub3Event2 from '../img/event2.jpg'
 import Sub3Event3 from '../img/event3.png'
@@ -10,8 +10,10 @@ const Section3_subpage = () => {
     return ( 
         <section>
             <article className='subHeadImgArticle'>
-                <img className='subHeadImg' src={HeaderImg}></img>
-                <p>관련 행사 소개</p>
+                <div className="infoTit">
+                    <img src={headerImg}></img>
+                    <h3>관련 행사 소개</h3>
+                </div>
             </article>
             <article className='sub3TitleArticle'>
                 <h1>궁궐 체험 행사</h1>

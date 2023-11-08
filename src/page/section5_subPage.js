@@ -9,11 +9,11 @@ const Section5_subPage = () => {
 
     return (  
         <section className='section5_subPage'>
+                          <div className="infoTit">
+                    <img src={headerImg}></img>
+                    <h3>갤러리</h3>
+                </div>
                <div className='w1500'>
-                    <div className='section5SubHeader'>
-                        <div><img src={headerImg}></img></div>
-                        <h2>갤러리</h2>
-                    </div>
                     <div className='section5SubMain'>
                         <article className='flex5' >
                             <div className='galleryImg'><img src={galleryImg1}></img></div>

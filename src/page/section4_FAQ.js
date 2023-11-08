@@ -67,11 +67,11 @@ const Section4_FAQ = () => {
 
     return (
         <section className='section4_subPage'>
-            <div className='w1500'>
-                <div className='section4SubHeader'>
-                    <div><img src={headerImg}></img></div>  {/* Header 이미지를 표시 */}
-                    <h2>FAQ</h2>
+              <div className="infoTit">
+                    <img src={headerImg}></img>
+                    <h3>FAQ</h3>
                 </div>
+            <div className='w1500'>
                 <div className='Section4_announcementBtns'>
                     <ul className='flex2'>
                         {/* 메뉴 항목을 클릭할 때 클래스를 조건부로 설정하여 활성/비활성 스타일을 적용합니다. */}

@@ -175,3 +175,19 @@ canvas{
     font-size: calc(100vw * (80 / 480));
   }
 }
+.infoTit{
+  padding: 100px 0 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #888;
+}
+.infoTit>img{
+  max-width: 300px;
+  height: auto;
+}
+.infoTit>h3{
+  font-size: 40px;
+  margin-top: 50px;
+}
