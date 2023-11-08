@@ -47,20 +47,22 @@ const Section4_FAQ = () => {
         // 컴포넌트가 마운트될 때, 마우스 이벤트 리스너를 추가합니다.
 
 
-        window.onload = function(){
+    
             lis.current.forEach((li, index) => {
                 li.addEventListener('mouseover', () => handleMouseOver(index));
                 li.addEventListener('mouseleave', () => handleMouseOver(null)); // 마우스를 떠날 때 null로 설정
             });
     
             return () => {
+                window.onload = function(){
                 // 컴포넌트가 언마운트될 때 이벤트 리스너를 제거합니다.
                 lis.current.forEach((li, index) => {
                     li.removeEventListener('mouseover', () => handleMouseOver(index));
                     li.removeEventListener('mouseleave', () => handleMouseOver(null));
                 });
+            }
             };
-        }
+        
     }, []);
 
     return (

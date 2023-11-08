@@ -29,6 +29,7 @@
     table-layout: fixed; 
     border-top: 1px solid #888;  
     margin-bottom: 50px; 
+    margin-top: 80px;
 }
 .listTit>colgroup{
     display: table-column-group;
@@ -37,6 +38,16 @@
     line-height: 70px;
     text-align: center;
     border-bottom: 1px solid #888;
+    cursor: pointer;
+}
+.listTit>tr:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.listTit>tr:first-of-type{
+    cursor: default;
+}
+.listTit>tr:first-of-type:hover{
+    background: none;
 }
 .listTit>tr{
     width: 100%;
@@ -63,6 +74,7 @@
 .listTit a{
     width: 100%;
     display: inline-block;
+   
 }
 .searchBox{
     display: flex;
@@ -81,6 +93,10 @@
     height: 40px;
     margin-left: 10px;
     border: 1px solid #fff;
+    cursor: pointer;
+}
+.searchBtn:hover{
+    background-color: rgba(0, 0, 0, 0.8);
 }
 @media (max-width:768px) {
     .listTit>tr>td:first-child{

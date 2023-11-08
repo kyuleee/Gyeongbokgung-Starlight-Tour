@@ -10,7 +10,9 @@
 .sec2Padding {
   padding: 250px 0px 190px 0px;
 }
-
+.paddingRight{
+  padding-right: 200px;
+}
 .programH1{
   margin-top: 0 !important;
   font-size: 80px;

@@ -1,6 +1,6 @@
-import { useState, useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';  
 import { useNavigate,Link } from 'react-router-dom';
-import topImg from '../img/headerImg.png';
+import headerImg from '../img/headerImg.png';
 import '../pageCss/notiWrite.css'
 
 const NotiWrite = ({notiCreate}) => {
@@ -8,6 +8,9 @@ const NotiWrite = ({notiCreate}) => {
     const notiCnt = useRef();
     const notiTit = useRef();
     const navigate = useNavigate();
+    
+    const [isLiOn, setLiOn] = useState(0); // 초기 메뉴 항목을 0으로 설정
+    const lis = useRef([]); 
 
     const [notiValue, setNotiValue]=useState({
         title:'',
@@ -55,22 +58,45 @@ const NotiWrite = ({notiCreate}) => {
     }
 
 
+    const handleMouseOver = (index) => {
+        setLiOn(index);
+    };
+    useEffect(() => { 
+        // 컴포넌트가 마운트될 때, 마우스 이벤트 리스너를 추가합니다.
+
+
+    
+            lis.current.forEach((li, index) => {
+                li.addEventListener('mouseover', () => handleMouseOver(index));
+                li.addEventListener('mouseleave', () => handleMouseOver(null)); // 마우스를 떠날 때 null로 설정
+            });
+    
+            return () => {
+                window.onload = function(){
+                // 컴포넌트가 언마운트될 때 이벤트 리스너를 제거합니다.
+                lis.current.forEach((li, index) => {
+                    li.removeEventListener('mouseover', () => handleMouseOver(index));
+                    li.removeEventListener('mouseleave', () => handleMouseOver(null));
+                });
+            }
+            };
+        
+    }, []);
     return ( 
         <section className="notiWrite">
-            <div className="infoTit">
-                <img src={topImg}></img>
-                <h3>문의하기</h3>
-            </div>
             <article className='w1500'>
-                <div className='tabWrap'>
-                    <nav>
-                        <ul>
-                            <Link to='/NoticeList'><li>공지사항</li></Link>
-                            <Link to='/NoticeWrite'><li>문의하기</li></Link>
-                            <Link to='/NoticeWrite'><li>FAQ</li></Link>
-                        </ul>
-                    </nav>
+            <div className='section4SubHeader'>
+                    <div><img src={headerImg}></img></div>  {/* Header 이미지를 표시 */}
+                    <h2>문의하기</h2>
                 </div>
+                <div className='Section4_announcementBtns'>
+                    <ul className='flex2'>
+                        {/* 메뉴 항목을 클릭할 때 클래스를 조건부로 설정하여 활성/비활성 스타일을 적용합니다. */}
+                        <Link to='/NoticeList'><li className={isLiOn === 0 ? 'on' : 'off'} ref={(li) => (lis.current[0] = li)}>공지사항</li></Link>
+                        <Link to='/NoticeWrite'><li className={isLiOn === 1 ? 'on' : 'off'} ref={(li) => (lis.current[1] = li)}>문의하기</li></Link>
+                        <Link to='/FAQ'><li className={isLiOn === 2 ? 'on' : 'off'} ref={(li) => (lis.current[2] = li)}>FAQ</li></Link>
+                    </ul>
+                </div>    
                 <div className='joinWrap'>
                     <h3>
                         2023 경복궁 별빛야행 축제에 대해 궁금한 점이 있으신가요?

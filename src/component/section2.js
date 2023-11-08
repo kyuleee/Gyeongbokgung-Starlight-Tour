@@ -79,7 +79,7 @@ const Section2 = () => {
                            ${isSlideDown3 ? 'slideBox' : 'down3'}
                             `} ref={slideBox}>
                             <div className="slide slide1 flex">
-                                <article className="section2Aticle">
+                                <article className="section2Aticle paddingRight">
                                     <div>
                                         <h2 className="programH2">{t('sec2.box1')}</h2>       
                                         <p>{t('sec2.box1_1')}.</p>
@@ -92,7 +92,7 @@ const Section2 = () => {
                                 </article>
                             </div>    
                             <div  className="slide slide2 flex">
-                                <article className="section2Aticle">
+                                <article className="section2Aticle paddingRight">
                                     <div>
                                         <h2 className="programH2">{t('sec2.box2')}</h2>       
                                         <p>{t('sec2.box2_1')}.</p>
@@ -105,7 +105,7 @@ const Section2 = () => {
                                 </article>
                             </div>    
                             <div  className="slide slide3 flex">
-                                <article className="section2Aticle">
+                                <article className="section2Aticle paddingRight">
                                     <div>
                                         <h2 className="programH2">{t('sec2.box3')}</h2>       
                                         <p>{t('sec2.box3_1')}.</p>
@@ -118,7 +118,7 @@ const Section2 = () => {
                                 </article>
                             </div>   
                             <div  className="slide slide4 flex">
-                                <article className="section2Aticle">
+                                <article className="section2Aticle paddingRight">
                                     <div>
                                         <h2 className="programH2">{t('sec2.box4')}</h2>       
                                         <p>{t('sec2.box4_1')}.</p>

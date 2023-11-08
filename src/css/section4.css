@@ -23,9 +23,9 @@
     cursor: pointer;
 }
 .notice:hover{
-    transform: translateY(-3%);
+    background-color: rgba(0, 0, 0, 0.8);
 }
-.notice:last-of-type{
+.section4Aticle:last-child{
     border-bottom:1px solid white;
 }
 .notice p{

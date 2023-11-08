@@ -31,17 +31,18 @@ const Section4_announcement2 = () => {
     return (  
         <section className='Section4_announcement2'>
                <div className='w1500'>
-                    <div className='section4SubHeader'>
-                        <div><img src={headerImg}></img></div>
-                        <h2>공지사항</h2>
-                    </div>
-                    <div className='Section4_announcementBtns'>
-                        <ul className='flex2'>
-                            <li className={isLiOn === 0 ? 'on' : 'off'} ref={(li) => (lis.current[0] = li)}>공지사항</li>
-                            <li className={isLiOn === 1 ? 'on' : 'off'} ref={(li) => (lis.current[1] = li)}>문의하기</li>
-                            <li className={isLiOn === 2 ? 'on' : 'off'} ref={(li) => (lis.current[2] = li)}>FAQ</li>
-                        </ul>
-                    </div>
+               <div className='section4SubHeader'>
+                    <div><img src={headerImg}></img></div>  {/* Header 이미지를 표시 */}
+                    <h2>공지사항</h2>
+                </div>
+                <div className='Section4_announcementBtns'>
+                    <ul className='flex2'>
+                        {/* 메뉴 항목을 클릭할 때 클래스를 조건부로 설정하여 활성/비활성 스타일을 적용합니다. */}
+                        <Link to='/NoticeList'><li className={isLiOn === 0 ? 'on' : 'off'} ref={(li) => (lis.current[0] = li)}>공지사항</li></Link>
+                        <Link to='/NoticeWrite'><li className={isLiOn === 1 ? 'on' : 'off'} ref={(li) => (lis.current[1] = li)}>문의하기</li></Link>
+                        <Link to='/FAQ'><li className={isLiOn === 2 ? 'on' : 'off'} ref={(li) => (lis.current[2] = li)}>FAQ</li></Link>
+                    </ul>
+                </div>    
                     <div>
                         <table className='Section4_announcementTable'>
                             <tr>
