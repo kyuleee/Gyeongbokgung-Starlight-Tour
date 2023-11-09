@@ -7,9 +7,7 @@ import i18n from '../lang/i18n'
 
 const Footer = () => {
     const { t } = useTranslation();
-
     const locationSectionFooter = useLocation();
-    console.log(locationSectionFooter.pathname)
     const ClickGuide = ()=>{
         window.scrollTo({
             top: `1390`,

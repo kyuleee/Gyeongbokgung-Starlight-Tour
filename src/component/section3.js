@@ -59,7 +59,7 @@ const Section3 = () => {
   
   //href로 페이지 이동
   const MoveEventPage = ()=>{
-    window.location.href = '/Event'
+    window.location.pathname = '/Event'
   }
 
   return (
