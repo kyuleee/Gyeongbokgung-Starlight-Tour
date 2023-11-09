@@ -179,3 +179,13 @@
         opacity: 1;  
     }
 }
+@media (max-width : 480px) {
+   .Section4_announcementBtns > ul li{
+      width: 100%;
+      font-size: 16px;
+      padding: 20px 20px;
+   }
+   .Section4_announcementBtns{
+      width: 100%;
+    }
+}

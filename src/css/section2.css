@@ -196,7 +196,7 @@
 
 
 @media (max-width: 1500px){
-  .section2 { width: 90%; }
+  /* .section2 { width: 90%; } */
   .programH1 {font-size: calc(100vw * (80/1500));}
   .programH2 {font-size: calc(100vw * (40/1500));}
   .section2Aticle {
@@ -220,7 +220,6 @@
 
 
 @media (max-width: 1024px){
-  .section2 { width: 90%;}
   .programH1 {font-size: calc(100vw * (80/1500));}
   .programH2 {margin-top: 70px; font-size: calc(100vw * (30/1024));}
   .sticky2{height:750px; top:115px;}

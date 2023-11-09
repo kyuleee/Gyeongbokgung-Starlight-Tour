@@ -68,33 +68,29 @@ const NotiList = ({notiData}) => {
                         <td>공지</td>
                         <td>2023 경복궁 별빛야행 입장 및 관람안내</td>
                         <td>민규리</td>
+                        <td>2023-10-02</td>
+                    </tr>
+                    <tr>
+                        <td>공지</td>
+                        <td>2023 경복궁 별빛야행 입장 및 관람안내</td>
+                        <td>전완진</td>
                         <td>2023-10-18</td>
                     </tr>
                     <tr>
                         <td>공지</td>
                         <td>2023 경복궁 별빛야행 입장 및 관람안내</td>
-                        <td>민규리</td>
-                        <td>2023-10-18</td>
-                    </tr>
-                    <tr>
-                        <td>공지</td>
-                        <td>2023 경복궁 별빛야행 입장 및 관람안내</td>
-                        <td>민규리</td>
-                        <td>2023-10-18</td>
+                        <td>조성민</td>
+                        <td>2023-10-28</td>
                     </tr>
                     {notiData.map((notiD)=>
                         <tr key={notiD.notiId} className='ddd'>
-                                <td><Link to={`/NoticeList/${notiD.notiId}`}>{notiD.notiId}</Link></td>
+                                <td><Link to={`/NoticeList/${notiD.notiId}`}>{notiD.notiId + 1}</Link></td>
                                 <td><Link to={`/NoticeList/${notiD.notiId}`}>{notiD.title}</Link></td>
                                 <td><Link to={`/NoticeList/${notiD.notiId}`}>{notiD.userName}</Link></td>
                             <td>{new Date(notiD.createDate).toLocaleDateString().replace(/\./g, '').replace(/\s/g, '-')}</td>
                         </tr>
                     )}
                 </table>
-                <div className='searchBox'>
-                    <input type='text' placeholder='내용 + 제목'></input>
-                    <button className='searchBtn' >검색</button>
-                </div>
             </article>
         </section>
      );

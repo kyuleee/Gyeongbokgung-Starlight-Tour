@@ -49,8 +49,8 @@ const Section1_supPage = () => {
   
       function error() {
         setLocation({
-          latitude:  37.579617,
-          longitude: 126.977041,
+            latitude: 37.5785367664947,
+            longitude: 126.9766904118245,
         });
         console.log("위치 받기 실패");
       }
