@@ -108,7 +108,7 @@ const NotiWrite = ({notiCreate}) => {
                             <li>
                                 <label>이름<span>*</span></label>
                                 <div className='inbx'>
-                                    <input type='text' name='userName' value={userName} ref={notiName} onChange={changeValue} placeholder='제목을 입력해주세요' autoComplete='off'/>
+                                    <input type='text' name='userName' value={userName} ref={notiName} onChange={changeValue} placeholder='이름을 입력해주세요' autoComplete='off'/>
                                     <p>이름을 입력해주세요</p>
                                 </div>
                             </li>
@@ -122,7 +122,7 @@ const NotiWrite = ({notiCreate}) => {
                             <li>
                                 <label>제목<span>*</span></label>
                                 <div className='inbx'>
-                                    <input type='text' name='title' value={title} ref={notiTit} onChange={changeValue} placeholder='"-" 없이 숫자만 입력해주세요' autoComplete='off'/>
+                                    <input type='text' name='title' value={title} ref={notiTit} onChange={changeValue} placeholder='제목을 입력해주세요' autoComplete='off'/>
                                     <p>제목을 입력해주세요</p>
                                 </div>
                             </li>

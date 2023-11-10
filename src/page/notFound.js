@@ -1,3 +1,5 @@
+import "../pageCss/notFound.css"
+
 const NotFound = ()=>{
     return(
         <section className="NotFound">

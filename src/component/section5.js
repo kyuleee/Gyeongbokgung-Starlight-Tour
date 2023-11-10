@@ -18,13 +18,13 @@ const Section5 = () => {
     const botOnRun = () => setBotMove(true);
 
     const slides = [
-        { background: 'img/gallery_img1.jpg', target: "#" },
-        { background: 'img/gallery_img2.jpg', target: "#" },
-        { background: 'img/gallery_img3.jpg', target: "#" },
-        { background: 'img/gallery_img4.jpg', target: "#" },
-        { background: 'img/gallery_img5.jpg', target: "#" },
-        { background: 'img/gallery_img6.jpg', target: "#" },
-        { background: 'img/gallery_img7.jpg', target: "#" },
+        { background: 'img/gallery_img1.jpg'},
+        { background: 'img/gallery_img2.jpg'},
+        { background: 'img/gallery_img3.jpg'},
+        { background: 'img/gallery_img4.jpg'},
+        { background: 'img/gallery_img5.jpg'},
+        { background: 'img/gallery_img6.jpg'},
+        { background: 'img/gallery_img7.jpg'},
     ];
 
     return (  
