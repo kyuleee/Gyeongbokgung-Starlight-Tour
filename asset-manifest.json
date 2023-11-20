@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/festival/static/css/main.dc365db7.css",
+    "main.js": "/festival/static/js/main.fa628093.js",
+    "static/media/TEAM3.glb": "/festival/static/media/TEAM3.5a80768b3f70c0bf1ac1.glb",
+    "static/media/img4.jpg": "/festival/static/media/img4.e7d1434865c02b95c2b7.jpg",
+    "static/media/galleryImg1.png": "/festival/static/media/galleryImg1.302e1727b2bb075c4461.png",
+    "static/media/galleryImg4.png": "/festival/static/media/galleryImg4.f23290bc5ac628d9ec9f.png",
+    "static/media/galleryImg2.png": "/festival/static/media/galleryImg2.48e1675313200cfca3c8.png",
+    "static/media/img6.png": "/festival/static/media/img6.abbce8b06bf9496a7c75.png",
+    "static/media/img7.png": "/festival/static/media/img7.e97fbd63f942d3519da5.png",
+    "static/media/img3.jpg": "/festival/static/media/img3.03e4d1d07d430d60d93d.jpg",
+    "static/media/galleryImg3.png": "/festival/static/media/galleryImg3.6d5c8c6fa1759cc3236a.png",
+    "static/media/img5.png": "/festival/static/media/img5.8aaad219eade659ba534.png",
+    "static/media/event5.png": "/festival/static/media/event5.ef15ef90d99efd4a8c83.png",
+    "static/media/event3.png": "/festival/static/media/event3.e4772028bbf9ba0c3e56.png",
+    "static/media/img8.png": "/festival/static/media/img8.d9512a2ba40befea2ffa.png",
+    "static/media/img2.jpg": "/festival/static/media/img2.43ffe24fd4f8fa1b2f82.jpg",
+    "static/media/img1.jpg": "/festival/static/media/img1.8dba1b6a8b8435361f48.jpg",
+    "static/media/event2.jpg": "/festival/static/media/event2.fc8d3047f3f735db2cb2.jpg",
+    "static/media/event1.jpg": "/festival/static/media/event1.649d08d958dd49dbf58d.jpg",
+    "static/media/event4.jpg": "/festival/static/media/event4.4875a9ceddde124d05b4.jpg",
+    "static/media/headerImg.png": "/festival/static/media/headerImg.d029a733a0031a2206a8.png",
+    "static/media/mainText2.png": "/festival/static/media/mainText2.15c7128f31413c207202.png",
+    "index.html": "/festival/index.html",
+    "main.dc365db7.css.map": "/festival/static/css/main.dc365db7.css.map",
+    "main.fa628093.js.map": "/festival/static/js/main.fa628093.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dc365db7.css",
+    "static/js/main.fa628093.js"
+  ]
+}
