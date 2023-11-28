@@ -32,7 +32,7 @@ const Header  = () => {
     return (
       <header className="stickyHead">
         <div className='stickyWebNav'>
-          <Link to="/festival/"><img alt='로고' className="headerLogo" src={imgUrl + '/img/Logo_white.png'}></img></Link>
+          <Link to="/Gyeongbokgung-Starlight-Tour/"><img alt='로고' className="headerLogo" src={imgUrl + '/img/Logo_white.png'}></img></Link>
           <ul>
             <Link to="/Guide"><li>{t('header.menu1')}</li></Link>
             <Link to="/Program"><li>{t('header.menu2')}</li></Link>
