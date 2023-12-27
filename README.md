@@ -117,11 +117,6 @@
 <br>
 
 ## 6. 페이지별 기능(민규리)
-![조원comm](https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/ad56c8d0-972c-42bf-bc69-fae3144126b9)
-![별빛야행소개 ](https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/2af5d1a7-6040-408a-af91-5b693f97d230)
-![메인sec2](https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/81a4bfef-c2d3-49b8-9152-ac1348576cc0)
-![다국어](https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/b83f1b5a-788b-4c9e-8575-893851ce5e28)
-![로그인](https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/145549d9-9365-4364-ad81-c591d6e73780)
 
 
 ### [초기화면]
