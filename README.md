@@ -117,59 +117,78 @@
 <br>
 
 ## 6. 페이지별 기능(민규리)
+![조원comm](https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/ad56c8d0-972c-42bf-bc69-fae3144126b9)
+![별빛야행소개 ](https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/2af5d1a7-6040-408a-af91-5b693f97d230)
+![메인sec2](https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/81a4bfef-c2d3-49b8-9152-ac1348576cc0)
+![다국어](https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/b83f1b5a-788b-4c9e-8575-893851ce5e28)
+![로그인](https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/145549d9-9365-4364-ad81-c591d6e73780)
+
 
 ### [초기화면]
-- 초기에 필요한 자원을 불러오고 설정하는데 시간이 걸립니다.
-- 로딩 페이지를 통해 이러한 기술적인 처리 시간을 숨겨 사용자 경험을 개선할 수 있었습니다. 
+- blender로 제작한 3d 별빛야행 text
 
-| 초기화면 |
+| 인트로 3D text |
 |----------|
-|![독수리 로딩](https://github.com/kyuleee/docsuri/assets/118513511/8ca21e5b-5233-4ece-9327-a74eaedf3140)|
+|![조원1](https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/d2e0085f-63c5-4304-8533-7a93ca7912cd)|
 
 <br>
 
-### [Header 기능]
-- session storage 사용자 정보 여부 확인
-- 로그인이 되어 있지 않은 경우 : SNS 로그인 페이지
-- 로그인이 되어 있는 경우 : 마이페이지
+### [다국어]
+- i18next는 자바스크립트에서 국제화 프레임워크로 쓰인다. Node.js, PHP, iOS, Android 및 기타 플랫폼과 함께 i18next를 사용할 수도 있다.
 
-| 마이페이지 icon |
+| 다국어 지원 |
 |----------|
-|![로그인기능](https://github.com/kyuleee/docsuri/assets/118513511/6d266d6a-3117-45ea-bee4-6bab603e1f5a)|
+|![다국어](https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/b83f1b5a-788b-4c9e-8575-893851ce5e28)|
 
 <br>
 
-### [마이페이지]
-- 로그인 페이지의 유효성 검사를 통과해야 진입할 수 있습니다.
-- 마이페이지에 필요한 프로필 사진, 사용자 이름, 계정 ID, password, 학년, 학교를 넘겨받습니다.
-- 프로필 사진은 등록하지 않을 경우 기본 이미지가 등록됩니다.
-- 로그인 버튼 클릭 시 id 또는 비밀번호가 일치하지 않을 경우에는 마이페이지로 이동하지 못하며, 로그인에 성공하면 마이페이지로 이동합니다.
-- 로그아웃시 세션 저장소의 토큰 값과 사용자 정보를 삭제하고 로그인 페이지로 이동합니다.
+### [MAIN Section 02]
+- 원페이지 가로 스크롤로 제작하여 데스크탑과 노트북 환경에서 깔끔한 맛이 있습니다.
 
-| 마이페이지 & 로그인 & 회원가입 |
+| 메인페이지 sec2 |
 |----------|
-|![마이페이지](https://github.com/kyuleee/docsuri/assets/118513511/e4ca2e78-a305-4e5a-a0db-a9a690e4fe2f)|
+|![메인sec2](https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/81a4bfef-c2d3-49b8-9152-ac1348576cc0)|
 
 <br>
 
 
-### [게시글]
+### [별빛야행 소개]
 
-#### 1. 수다학 & 검색 기능
-- 글이 입력하면 하단에 글이 업로드 됩니다.
-- 타 유저의 게시글에 모달 버튼을 통해 댓글을 작성할 수 있습니다.
-- 댓글 수는 실시간으로 페이지에 반영됩니다.
-- 댓글 포함된 단어를 검색할 수 있습니다.
-- 검색 아이콘 클릭 시 검색어와 일치하는 글을 검색할 수 있습니다.
+#### 1. AOS & 카카오 MAP API
+- REACT AOS 라이브러리 사용하여 정보를 동적으로 전달할 수 있게 FADE 애니메이션 효과를 주었습니다.
+- 카카오 MAP API를 연결하여 화면상에 지도를 나타냈습니다.
+- 위치 정보 제공에 동의하면 실시간 현위치도 알 수 있습니다.
+- 경복궁 위치를 기본값으로 설정해놨습니다.
+
+| 별빛야행 소개 |
+|----------|
+|![별빛야행소개 ](https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/2af5d1a7-6040-408a-af91-5b693f97d230)|
+
+
+<br>
+### [커뮤니티]
+
+#### 1. 글 등록, 삭제, 상세페이지
+- 문의사항 페이지에 글을 입력하면 공지사항 페이지에 글이 등록됩니다.
+- 해당 게시물을 누르면 상세페이지로 이동하게 됩니다.
+- 목록 버튼을 누르면 공지사항 페이지로 이동하게 됩니다.
+- 삭제 버튼을 누르면 해당 게시물이 삭제됩니다.
 
 | 게시글 |
 |----------|
-|![수다학](https://github.com/kyuleee/docsuri/assets/118513511/9ba4db2d-c9e2-47cc-b74f-7f5db505863a)|
+|![조원comm](https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/ad56c8d0-972c-42bf-bc69-fae3144126b9)|
 
 
 <br>
+### [로그인, 회원가입]
+- 회원가입 버튼 클릭시 alert 회원축하 메시지
+- jsx, css3 제작
 
- ![조원1](https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/d2e0085f-63c5-4304-8533-7a93ca7912cd)
+| 로그인 & 회원가입 |
+|----------|
+|![로그인](https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/145549d9-9365-4364-ad81-c591d6e73780)|
+
+<br>
 
 
 ## 7. 프로젝트 후기
