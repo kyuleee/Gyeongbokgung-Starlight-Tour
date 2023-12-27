@@ -1,4 +1,4 @@
-# 📖 경복궁 별빛야행 README
+# 🌇 경복궁 별빛야행 README
 <div align='center'>
  <img src='https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/955ae141-efe6-49af-8ec5-72237742194d'>
 </div>
