@@ -1,6 +1,7 @@
 # 📖 경복궁 별빛야행 README
 <div align='center'>
- <img src='https://github.com/kyuleee/docsuri/assets/118513511/581313d2-764f-4b11-95c3-5f0e0b204064'>
+ <img src='https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/955ae141-efe6-49af-8ec5-72237742194d'>
+
 </div>
 - 배포 URL : https://kyuleee.github.io/docsuri
 
@@ -175,7 +176,8 @@
 
 
 <br>
-   
+
+ ![조원1](https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/d2e0085f-63c5-4304-8533-7a93ca7912cd)
 
 ## 7. 프로젝트 후기
 
