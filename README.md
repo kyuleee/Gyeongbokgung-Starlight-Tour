@@ -67,7 +67,8 @@
 
 ## 3. 프로젝트 구조
 <img src='https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/10483e82-c669-4344-8313-4fae629f268c' width='500px' height='auto' alt='별빛야행 정보구조도'>
-![image 79](https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/57dff321-30f8-4bf9-a639-c1e13fbf0c0d)
+
+<img src='https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/57dff321-30f8-4bf9-a639-c1e13fbf0c0d' width='500px' height='auto' alt='별빛야행 정보구조도'>
 
 <br>
 
