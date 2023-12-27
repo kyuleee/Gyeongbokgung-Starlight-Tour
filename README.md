@@ -170,7 +170,7 @@
 <br>
 
  ![조원1](https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/d2e0085f-63c5-4304-8533-7a93ca7912cd)
- <img src='https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/d2e0085f-63c5-4304-8533-7a93ca7912cd' alt='별빛야행 3d txt' backgroundColor='#ccc'>
+
 
 ## 7. 프로젝트 후기
 
