@@ -1,9 +1,8 @@
 # 📖 경복궁 별빛야행 README
 <div align='center'>
  <img src='https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/955ae141-efe6-49af-8ec5-72237742194d'>
-
 </div>
-- 배포 URL : https://kyuleee.github.io/docsuri
+- 배포 URL : https://kyuleee.github.io/Gyeongbokgung-Starlight-Tour
 
 <br/><br/>
 
@@ -18,11 +17,11 @@
 </div>
 ## 프로젝트 소개
 
-- 독:수리는 초등학교 고학년을 타겟으로 한 수학 문제 사이트입니다.
-- 읽을 독 讀 과 수리 영역을 합쳐 독:수리라는 사이트를 PWA형태로 제작하게 되었습니다.
-- 독:수리 커뮤니티 페이지 수다학에서 소통하고 정보를 공유할 수 있습니다.
-- 메인 페이지에 3d 모델을 넣어 현대적이고 창의적인 이미지를 투영하여 사용자들에게 더 긍정적인 인상을 주고 있습니다.
-- 수학 학습을 챌린지 요소와 결합해서 즐겁고 흥미진진한 경험을 제공하고 있습니다.
+- 별빛야행은 경복궁에서 열리는 별빛야행 축제를 소개하는 사이트입니다.
+- 별빛야행 사이트는 PWA형태로 제작되었습니다.
+- 메인 페이지에 경복궁 3D 모델을 넣어 현대적이고 창의적인 이미지를 투영하여 사용자들에게 더 긍정적인 인상을 주고 있습니다.
+- 별빛야행이라는 주제와 어울리게 별이 쏟아지는 듯한 배경을 3D로 제작하여 사용자의 눈길을 끌어냈습니다.
+- 영어 다국어 지원
 
 
 <br>
@@ -41,10 +40,10 @@
 ## 1. 개발 환경
 
 - 사용한 프레임워크 & 언어 : JSX, javascript, CSS3, node.js, npm, React, three.js
-- 협업 툴, 버전 및 이슈관리 : Github, Notion, Github Desktop, Obsidian
-- 디자인 : [Figma](https://www.figma.com/file/DvLzDdG7zgsBoRLZRthyR5/%EB%8F%85%EC%88%98%EB%A6%AC%EC%98%A4%EB%82%A8%EB%A7%A4-%ED%8C%80%ED%94%8C?type=design&node-id=7-724&mode=design&t=qibwXTCfjPgQrxgT-0)
-- 사용프로그램 : vscode, Blender, illustrator, photoshop
-- 사용 패키지 :  React-router-dom , gh-pages, three.js, kakao login API
+- 협업 툴, 버전 관리 : Github
+- 디자인 : [Figma](https://www.figma.com/file/m57smaTc5OhMeQscw94g66/%EC%A1%B0%EC%9B%90%EA%B2%B0%EC%9D%98?type=design&node-id=103-8&mode=design&t=6THmCqlTc0UW21zB-0)
+- 사용프로그램 : vscode, Blender, illustrator, photoshop, 3ds Max
+- 사용 패키지 :  React-router-dom , gh-pages, three.js, kakao map API, react-i18next
 <br>
 
 
@@ -59,7 +58,7 @@
 ### 브랜치 전략
 
 - Git-flow 전략을 기반으로 main, develop 브랜치와 feature 보조 브랜치를 운용했습니다.
-- main, develop, feauture 브랜치로 나누어 개발을 하였습니다.
+- main, develop, feature 브랜치로 나누어 개발을 하였습니다.
     - **main** 브랜치는 배포 단계에서만 사용하는 브랜치입니다.
     - **develop** 브랜치는 개발 단계에서 git-flow의 master 역할을 하는 브랜치입니다.
     - **feature** 브랜치는 기능 단위로 독립적인 개발 환경을 위하여 사용하고 merge 후 각 브랜치를 삭제해주었습니다.
@@ -67,7 +66,7 @@
 <br>
 
 ## 3. 프로젝트 구조
-![독수리정구](https://github.com/kyuleee/docsuri/assets/118513511/124959d6-18e9-4252-a045-145c087226b7)
+![조원정구](https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/10483e82-c669-4344-8313-4fae629f268c)
 
 <br>
 
