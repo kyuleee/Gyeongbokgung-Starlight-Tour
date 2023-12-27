@@ -2,6 +2,7 @@
 <div align='center'>
  <img src='https://github.com/kyuleee/Gyeongbokgung-Starlight-Tour/assets/118513511/955ae141-efe6-49af-8ec5-72237742194d'>
 </div>
+<br/>
 - 배포 URL : https://kyuleee.github.io/Gyeongbokgung-Starlight-Tour
 
 <br/><br/>
@@ -18,7 +19,7 @@
 ## 프로젝트 소개
 
 - 별빛야행은 경복궁에서 열리는 별빛야행 축제를 소개하는 사이트입니다.
-- 별빛야행 사이트는 PWA형태로 제작되었습니다.
+- 별빛야행 사이트는 PWA 형태로 제작되었습니다.
 - 메인 페이지에 경복궁 3D 모델을 넣어 현대적이고 창의적인 이미지를 투영하여 사용자들에게 더 긍정적인 인상을 주고 있습니다.
 - 별빛야행이라는 주제와 어울리게 별이 쏟아지는 듯한 배경을 3D로 제작하여 사용자의 눈길을 끌어냈습니다.
 - 영어 다국어 지원
